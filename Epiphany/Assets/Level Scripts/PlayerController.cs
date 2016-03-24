@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour {
 
 	public Color BoostColorReturn;
 
-	string isCollecting = "Beginning";
+	public string isCollecting = "Beginning";
 
 	public GameObject[] Bridge1;
 
