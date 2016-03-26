@@ -47,5 +47,23 @@ public class BridgeStates : MonoBehaviour {
 					form.GetComponent<Collider> ().enabled = true;
 			}
 		}
+
+		if (BridgeState2 == true){
+			foreach(GameObject form in Bridge2) {
+//					yield return new WaitForSeconds(0.01f);
+    				form.GetComponent<Renderer> ().enabled = true;
+					form.GetComponent<Collider> ().enabled = true;
+			}
+		}
+
+
+		if (BridgeState3 == true){
+			foreach(GameObject form in Bridge3) {
+//					yield return new WaitForSeconds(0.01f);
+    				form.GetComponent<Renderer> ().enabled = true;
+					form.GetComponent<Collider> ().enabled = true;
+			}
+		}
+
 	}
 }

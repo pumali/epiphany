@@ -25,7 +25,7 @@ public class ShieldBehavior : MonoBehaviour {
 	}
 
 	IEnumerator OnTriggerEnter(Collider trigger){
-		if (trigger.gameObject.CompareTag("Player") && BridgeStatus.BridgeState1 == false){
+		if (trigger.gameObject.CompareTag("Player") && BridgeStatus.BridgeState1 == false && gameObject.CompareTag("Shield1")){
 
 			
 			Player.isCollecting = "Beginning";

@@ -41,8 +41,6 @@ public class CameraController : MonoBehaviour{
 			Quaternion q = Quaternion.AngleAxis(Input.GetAxis ("Mouse X") * sensitivity, Vector3.up);
 		    offset = q * offset;
 		    transform.position = target.position + offset;
-//		    ROTATION ALTERNATIVE
-//			transform.rotation = q * transform.rotation;
 			transform.LookAt(LookAt);
 		}
 
