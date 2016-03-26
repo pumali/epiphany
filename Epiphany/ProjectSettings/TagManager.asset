@@ -19,6 +19,7 @@ TagManager:
   - GoalLight
   - Goal
   - Wave
+  - Shield1
   layers:
   - Default
   - TransparentFX
