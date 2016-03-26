@@ -10,6 +10,9 @@ public class BridgeStates : MonoBehaviour {
 
 //	public int BridgeState= 0;
 	public GameObject[] Bridge1;
+	public GameObject[] Bridge2;
+	public GameObject[] Bridge3;
+
 
 
 	// Use this for initialization
@@ -20,17 +23,28 @@ public class BridgeStates : MonoBehaviour {
 			form.GetComponent<Renderer> ().enabled = false;
 			form.GetComponent<Collider> ().enabled = false;
 			}
+
+		Bridge2 = GameObject.FindGameObjectsWithTag ("Bridge2");
+			foreach(GameObject form in Bridge2) {
+			form.GetComponent<Renderer> ().enabled = false;
+			form.GetComponent<Collider> ().enabled = false;
+			}
+
+		Bridge3 = GameObject.FindGameObjectsWithTag ("Bridge3");
+			foreach(GameObject form in Bridge3) {
+			form.GetComponent<Renderer> ().enabled = false;
+			form.GetComponent<Collider> ().enabled = false;
+			}
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (BridgeState1 == true){
-//		if (BridgeState <= 2 && BridgeState >= 0){
 			foreach(GameObject form in Bridge1) {
-//				yield return new WaitForSeconds(0.01f);
-    			form.GetComponent<Renderer> ().enabled = true;
-				form.GetComponent<Collider> ().enabled = true;
+//					yield return new WaitForSeconds(0.01f);
+    				form.GetComponent<Renderer> ().enabled = true;
+					form.GetComponent<Collider> ().enabled = true;
 			}
 		}
 	}

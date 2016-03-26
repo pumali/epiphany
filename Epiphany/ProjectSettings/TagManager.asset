@@ -20,6 +20,14 @@ TagManager:
   - Goal
   - Wave
   - Shield1
+  - Bridge2
+  - Bridge3
+  - PickUp4
+  - PickUp5
+  - PickUp6
+  - PickUp7
+  - PickUp8
+  - PickUp9
   layers:
   - Default
   - TransparentFX
