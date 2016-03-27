@@ -83,7 +83,7 @@ public class CameraController : MonoBehaviour{
 			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle2aCam.position, 100 * Time.deltaTime);
 
 		//rotation
-			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle2aCam.rotation, 200 * Time.deltaTime);
+			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle2aCam.rotation, 300 * Time.deltaTime);
 
 		}
 
@@ -95,7 +95,7 @@ public class CameraController : MonoBehaviour{
 			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle2bCam.position, 100 * Time.deltaTime);
 
 		//rotation
-			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle2bCam.rotation, 200 * Time.deltaTime);
+			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle2bCam.rotation, 300 * Time.deltaTime);
 
 		}
 
