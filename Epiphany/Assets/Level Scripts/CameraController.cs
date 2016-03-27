@@ -10,6 +10,13 @@ public class CameraController : MonoBehaviour{
 
 	public Transform Puzzle1Cam;
 	public Transform Puzzle1Sol;
+	public Transform Puzzle2aCam;
+	public Transform Puzzle2bCam;
+
+
+
+
+
 	//perspective mover
 	public float speed;
 
@@ -67,6 +74,31 @@ public class CameraController : MonoBehaviour{
 			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle1Sol.rotation, 50 * Time.deltaTime);
 
 		}
+
+		//Puzzle 2a Camera
+
+		if (CameraLocation == "OnPuzzle2a")
+		{
+		//direction
+			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle2aCam.position, 100 * Time.deltaTime);
+
+		//rotation
+			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle2aCam.rotation, 200 * Time.deltaTime);
+
+		}
+
+		//Puzzle 2b Camera
+
+		if (CameraLocation == "OnPuzzle2b")
+		{
+		//direction
+			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle2bCam.position, 100 * Time.deltaTime);
+
+		//rotation
+			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle2bCam.rotation, 200 * Time.deltaTime);
+
+		}
+
 
 
 	}

@@ -71,9 +71,6 @@ public class PlayerController : MonoBehaviour {
 			BridgeStatus = BridgeCubes.GetComponent<BridgeStates> ();
 			BridgeStatus.BridgeState1 = true;
 		}
-
-//test area!!!!!!
-
 		//Collectibles 4-6 Correct Sequence
 		if (isCollecting == "Beginning" && trigger.gameObject.CompareTag("PickUp4")){
 			trigger.gameObject.SetActive (false);
@@ -98,8 +95,6 @@ public class PlayerController : MonoBehaviour {
 			BridgeStatus = BridgeCubes.GetComponent<BridgeStates> ();
 			BridgeStatus.BridgeState2 = true;
 		}
-
-
 		//Collectibles 7-9 Correct Sequence
 		if (isCollecting == "Beginning" && trigger.gameObject.CompareTag("PickUp7")){
 			trigger.gameObject.SetActive (false);
@@ -125,30 +120,63 @@ public class PlayerController : MonoBehaviour {
 			BridgeStatus.BridgeState3 = true;
 		}
 
-
-
-//end of test area!!!
-
-	
 //Set Camera Perspective Trigger
+
+	//Puzzle 1 Perspective
 		if (trigger.gameObject.CompareTag("Puzzle1")){
-			if (isCollecting != "Second"){
+//			if (isCollecting != "Second"){
 				GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
 				MainCamera = Camera.GetComponent<CameraController> ();
 				MainCamera.CameraLocation = "OnPuzzle1";
-			}
+//			}
 		}
+	//Puzzle 2a Perspective
+		if (trigger.gameObject.CompareTag("Puzzle2a")){
+			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+			MainCamera = Camera.GetComponent<CameraController> ();
+			MainCamera.CameraLocation = "OnPuzzle2a";
+		}
+
+	//Puzzle 2b Perspective
+		if (trigger.gameObject.CompareTag("Puzzle2b")){
+			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+			MainCamera = Camera.GetComponent<CameraController> ();
+			MainCamera.CameraLocation = "OnPuzzle2b";
+		}
+
+
     }
 
 //Revert to Orbiting Camera
 	void OnTriggerExit (Collider camtrigger)
 	{
+		//exiting Puzzle 1 trigger zone
 		if (camtrigger.gameObject.CompareTag("Puzzle1"))
 			{
 			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
 			MainCamera = Camera.GetComponent<CameraController> ();
 			MainCamera.CameraLocation = "OnPlayer";
 			}
+
+		//exiting Puzzle 2a trigger zone
+		if (camtrigger.gameObject.CompareTag("Puzzle2a"))
+			{
+			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+			MainCamera = Camera.GetComponent<CameraController> ();
+			MainCamera.CameraLocation = "OnPlayer";
+			}
+
+		//exiting Puzzle 2b trigger zone
+		if (camtrigger.gameObject.CompareTag("Puzzle2b"))
+			{
+			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+			MainCamera = Camera.GetComponent<CameraController> ();
+			MainCamera.CameraLocation = "OnPlayer";
+			}
+
+
+
+
 	}
 
 
