@@ -28,6 +28,8 @@ TagManager:
   - PickUp8
   - PickUp9
   - Shield2
+  - Shield3
+  - Puzzle2
   layers:
   - Default
   - TransparentFX

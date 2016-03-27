@@ -88,16 +88,43 @@ public class PlayerController : MonoBehaviour {
 			trigger.gameObject.SetActive (false);
 			isCollecting = "Sixth";
 
-			yield return new WaitForSeconds(0.5f);
-			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
-			MainCamera = Camera.GetComponent<CameraController> ();
-			MainCamera.CameraLocation = "OnSolution2";
-			yield return new WaitForSeconds(1.0f);
+//			yield return new WaitForSeconds(0.5f);
+//			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+//			MainCamera = Camera.GetComponent<CameraController> ();
+//			MainCamera.CameraLocation = "OnSolution2";
+//			yield return new WaitForSeconds(1.0f);
 
-			GameObject BridgeCubes = GameObject.FindGameObjectWithTag("Bridge1");
+			GameObject BridgeCubes = GameObject.FindGameObjectWithTag("Bridge2");
 			BridgeStatus = BridgeCubes.GetComponent<BridgeStates> ();
-			BridgeStatus.BridgeState1 = true;
+			BridgeStatus.BridgeState2 = true;
 		}
+
+
+		//Collectibles 7-9 Correct Sequence
+		if (isCollecting == "Beginning" && trigger.gameObject.CompareTag("PickUp7")){
+			trigger.gameObject.SetActive (false);
+			isCollecting = "Seventh";
+		}
+		if (isCollecting == "Seventh" && trigger.gameObject.CompareTag("PickUp8")){
+			trigger.gameObject.SetActive (false);
+			isCollecting = "Eighth";
+		}
+
+		if (isCollecting == "Eighth" && trigger.gameObject.CompareTag("PickUp9")){
+			trigger.gameObject.SetActive (false);
+			isCollecting = "Ninth";
+
+//			yield return new WaitForSeconds(0.5f);
+//			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+//			MainCamera = Camera.GetComponent<CameraController> ();
+//			MainCamera.CameraLocation = "OnSolution2";
+//			yield return new WaitForSeconds(1.0f);
+
+			GameObject BridgeCubes = GameObject.FindGameObjectWithTag("Bridge3");
+			BridgeStatus = BridgeCubes.GetComponent<BridgeStates> ();
+			BridgeStatus.BridgeState3 = true;
+		}
+
 
 
 //end of test area!!!
