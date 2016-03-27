@@ -31,6 +31,8 @@ TagManager:
   - Shield3
   - Puzzle2a
   - Puzzle2b
+  - Puzzle3a
+  - Puzzle3b
   layers:
   - Default
   - TransparentFX

@@ -142,7 +142,19 @@ public class PlayerController : MonoBehaviour {
 			MainCamera.CameraLocation = "OnPuzzle2b";
 		}
 
+	//Puzzle 3a Perspective
+		if (trigger.gameObject.CompareTag("Puzzle3a")){
+			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+			MainCamera = Camera.GetComponent<CameraController> ();
+			MainCamera.CameraLocation = "OnPuzzle3a";
+		}
 
+	//Puzzle 3b Perspective
+		if (trigger.gameObject.CompareTag("Puzzle3b")){
+			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+			MainCamera = Camera.GetComponent<CameraController> ();
+			MainCamera.CameraLocation = "OnPuzzle3b";
+		}
     }
 
 //Revert to Orbiting Camera
@@ -155,7 +167,7 @@ public class PlayerController : MonoBehaviour {
 			MainCamera.CameraLocation = "OnPlayer";
 			}
 
-//		//exiting Puzzle 2a trigger zone
+		//exiting Puzzle 2a trigger zone
 		if (camtrigger.gameObject.CompareTag("Puzzle2a")){
 
 
@@ -171,6 +183,25 @@ public class PlayerController : MonoBehaviour {
 			MainCamera = Camera.GetComponent<CameraController> ();
 			MainCamera.CameraLocation = "OnPlayer";
 			}
+
+
+		//exiting Puzzle 3a trigger zone
+		if (camtrigger.gameObject.CompareTag("Puzzle3a")){
+
+
+			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+			MainCamera = Camera.GetComponent<CameraController> ();
+			MainCamera.CameraLocation = "OnPlayer";
+			}
+
+		//exiting Puzzle 3b trigger zone
+		if (camtrigger.gameObject.CompareTag("Puzzle3b")){
+
+			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+			MainCamera = Camera.GetComponent<CameraController> ();
+			MainCamera.CameraLocation = "OnPlayer";
+			}
+
 	}
 
 
