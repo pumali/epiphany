@@ -63,7 +63,7 @@ public class ShieldBehavior : MonoBehaviour {
 
 
 
-		if (trigger.gameObject.CompareTag("Player") && BridgeStatus1.BridgeState1 == true && gameObject.CompareTag("Shield2")){
+		if (trigger.gameObject.CompareTag("Player") && BridgeStatus2.BridgeState2 == false && gameObject.CompareTag("Shield2")){
 
 			
 			Player.isCollecting = "Beginning";
@@ -85,7 +85,7 @@ public class ShieldBehavior : MonoBehaviour {
 		}
 
 
-		if (trigger.gameObject.CompareTag("Player") && BridgeStatus2.BridgeState2 == true && gameObject.CompareTag("Shield3")){
+		if (trigger.gameObject.CompareTag("Player") && BridgeStatus3.BridgeState3 == false && gameObject.CompareTag("Shield3")){
 
 			
 			Player.isCollecting = "Beginning";
