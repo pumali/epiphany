@@ -23,21 +23,11 @@ public class PlayerController : MonoBehaviour {
 	public Color CollectibleChange;
 	public Color CollectibleReturn;
 	public string isCollecting = "Beginning";
-//	public GameObject[] Bridge1;*****
-	//Bridge States
-//	public bool BridgeState1 = false;
-//	public bool BridgeState2 = false;
-//	public bool BridgeState3 = false;
+
+
 
 	void Start (){
 	 	rb = GetComponent<Rigidbody>();
-
-	 	//Erase bridge mesh on start, stays active
-//		Bridge1 = GameObject.FindGameObjectsWithTag ("Bridge1");
-//		foreach(GameObject form in Bridge1) {
-//			form.GetComponent<Renderer> ().enabled = false;
-//			form.GetComponent<Collider> ().enabled = false;
-//			}
 	 }
 
 	void FixedUpdate (){
@@ -57,8 +47,7 @@ public class PlayerController : MonoBehaviour {
 
 	IEnumerator OnTriggerEnter(Collider trigger) {
 
-	//Collectibles Correct Sequence
-//		Bridge1 = GameObject.FindGameObjectsWithTag ("Bridge1");
+	//Collectibles 1-3 Correct Sequence
 		if (isCollecting == "Beginning" && trigger.gameObject.CompareTag("PickUp1")){
 			trigger.gameObject.SetActive (false);
 			isCollecting = "First";
@@ -70,6 +59,7 @@ public class PlayerController : MonoBehaviour {
 
 		if (isCollecting == "Second" && trigger.gameObject.CompareTag("PickUp3")){
 			trigger.gameObject.SetActive (false);
+			isCollecting = "Third";
 
 			yield return new WaitForSeconds(0.5f);
 			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -80,20 +70,38 @@ public class PlayerController : MonoBehaviour {
 			GameObject BridgeCubes = GameObject.FindGameObjectWithTag("Bridge1");
 			BridgeStatus = BridgeCubes.GetComponent<BridgeStates> ();
 			BridgeStatus.BridgeState1 = true;
+		}
+
+//test area!!!!!!
+
+		//Collectibles 4-6 Correct Sequence
+		if (isCollecting == "Beginning" && trigger.gameObject.CompareTag("PickUp4")){
+			trigger.gameObject.SetActive (false);
+			isCollecting = "Fourth";
+		}
+		if (isCollecting == "Fourth" && trigger.gameObject.CompareTag("PickUp5")){
+			trigger.gameObject.SetActive (false);
+			isCollecting = "Fifth";
+		}
+
+		if (isCollecting == "Fifth" && trigger.gameObject.CompareTag("PickUp6")){
+			trigger.gameObject.SetActive (false);
+			isCollecting = "Sixth";
+
+			yield return new WaitForSeconds(0.5f);
+			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+			MainCamera = Camera.GetComponent<CameraController> ();
+			MainCamera.CameraLocation = "OnSolution2";
+			yield return new WaitForSeconds(1.0f);
+
+			GameObject BridgeCubes = GameObject.FindGameObjectWithTag("Bridge1");
+			BridgeStatus = BridgeCubes.GetComponent<BridgeStates> ();
+			BridgeStatus.BridgeState1 = true;
+		}
 
 
-//			BridgeState1 = true;
-			}
+//end of test area!!!
 
-		//Bridge States
-
-//		if (BridgeState1 == true){
-//			foreach(GameObject form in Bridge1) {
-//				yield return new WaitForSeconds(0.01f);
-//    			form.GetComponent<Renderer> ().enabled = true;
-//				form.GetComponent<Collider> ().enabled = true;
-//			}
-//		}
 	
 //Set Camera Perspective Trigger
 		if (trigger.gameObject.CompareTag("Puzzle1")){

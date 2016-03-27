@@ -6,6 +6,9 @@ public class ShieldBehavior : MonoBehaviour {
 	public GameObject Pickup1;
 	public GameObject Pickup2;
 	public GameObject Pickup3;
+	public GameObject Pickup4;
+	public GameObject Pickup5;
+	public GameObject Pickup6;
 	public PlayerController Player;
 	public BridgeStates BridgeStatus;
 
@@ -25,7 +28,7 @@ public class ShieldBehavior : MonoBehaviour {
 	}
 
 	IEnumerator OnTriggerEnter(Collider trigger){
-		if (trigger.gameObject.CompareTag("Player") && BridgeStatus.BridgeState1 == false){
+		if (trigger.gameObject.CompareTag("Player") && BridgeStatus.BridgeState1 == false && gameObject.CompareTag("Shield1")){
 
 			
 			Player.isCollecting = "Beginning";
@@ -40,6 +43,29 @@ public class ShieldBehavior : MonoBehaviour {
 			Pickup2.SetActive(true);
 			yield return new WaitForSeconds(2);
 			Pickup3.SetActive(true);
+			gameObject.GetComponent<BoxCollider>().enabled = true;
+			yield return new WaitForSeconds(2);
+	
+
+		}
+
+
+
+		if (trigger.gameObject.CompareTag("Player") && BridgeStatus.BridgeState1 == true && gameObject.CompareTag("Shield2")){
+
+			
+			Player.isCollecting = "Beginning";
+
+			gameObject.GetComponent<BoxCollider>().enabled = false;
+			Pickup4.SetActive(false);
+			Pickup5.SetActive(false);
+			Pickup6.SetActive(false);
+			yield return new WaitForSeconds(2);
+			Pickup4.SetActive(true);
+			yield return new WaitForSeconds(2);
+			Pickup5.SetActive(true);
+			yield return new WaitForSeconds(2);
+			Pickup6.SetActive(true);
 			gameObject.GetComponent<BoxCollider>().enabled = true;
 			yield return new WaitForSeconds(2);
 	
