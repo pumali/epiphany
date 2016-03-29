@@ -20,11 +20,8 @@ public class PlayerController : MonoBehaviour {
 	public Color JumpColorReturn;
 	public Color BoostColorChange;
 	public Color BoostColorReturn;
-	public Color CollectibleChange;
-	public Color CollectibleReturn;
 	public string isCollecting = "Beginning";
-
-
+	public MusicManager Music;
 
 	void Start (){
 	 	rb = GetComponent<Rigidbody>();
@@ -60,7 +57,6 @@ public class PlayerController : MonoBehaviour {
 		if (isCollecting == "Second" && trigger.gameObject.CompareTag("PickUp3")){
 			trigger.gameObject.SetActive (false);
 			isCollecting = "Third";
-
 //			yield return new WaitForSeconds(0.5f);
 //			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
 //			MainCamera = Camera.GetComponent<CameraController> ();
@@ -70,6 +66,9 @@ public class PlayerController : MonoBehaviour {
 			GameObject BridgeCubes = GameObject.FindGameObjectWithTag("Bridge1");
 			BridgeStatus = BridgeCubes.GetComponent<BridgeStates> ();
 			BridgeStatus.BridgeState1 = true;
+
+//			Music.PuzzleStatus = "Puzzle1";
+
 		}
 		//Collectibles 4-6 Correct Sequence
 		if (isCollecting == "Beginning" && trigger.gameObject.CompareTag("PickUp4")){
@@ -84,6 +83,8 @@ public class PlayerController : MonoBehaviour {
 		if (isCollecting == "Fifth" && trigger.gameObject.CompareTag("PickUp6")){
 			trigger.gameObject.SetActive (false);
 			isCollecting = "Sixth";
+//			Music.Puzzle2 = true;
+//			Music.Puzzle1 = false;
 
 //			yield return new WaitForSeconds(0.5f);
 //			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -108,6 +109,9 @@ public class PlayerController : MonoBehaviour {
 		if (isCollecting == "Eighth" && trigger.gameObject.CompareTag("PickUp9")){
 			trigger.gameObject.SetActive (false);
 			isCollecting = "Ninth";
+
+//			Music.Puzzle3 = true;
+//			Music.Puzzle2 = false;
 
 //			yield return new WaitForSeconds(0.5f);
 //			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -203,8 +207,6 @@ public class PlayerController : MonoBehaviour {
 			}
 
 	}
-
-
     //Corruption Cubes
 	IEnumerator OnCollisionEnter(Collision cube) {
 
@@ -249,4 +251,5 @@ public class PlayerController : MonoBehaviour {
 	void ResetSpeed(){
 		speed = 10f;
 	}
+
 }

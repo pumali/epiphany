@@ -24,6 +24,7 @@ public class BridgeStates : MonoBehaviour {
 			form.GetComponent<Collider> ().enabled = false;
 			}
 
+
 		Bridge2 = GameObject.FindGameObjectsWithTag ("Bridge2");
 			foreach(GameObject form in Bridge2) {
 			form.GetComponent<Renderer> ().enabled = false;
@@ -47,6 +48,8 @@ public class BridgeStates : MonoBehaviour {
 					form.GetComponent<Collider> ().enabled = true;
 			}
 		}
+
+
 
 		if (BridgeState2 == true){
 			foreach(GameObject form in Bridge2) {

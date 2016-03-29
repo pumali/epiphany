@@ -33,6 +33,7 @@ TagManager:
   - Puzzle2b
   - Puzzle3a
   - Puzzle3b
+  - Puzzle2
   layers:
   - Default
   - TransparentFX
