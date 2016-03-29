@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Audio;
 
 public class MusicManager : MonoBehaviour {
 
 	public string PuzzleStatus = "Beginning";
 	AudioSource audio;
-	public AudioClip Song1;
-	public AudioClip Song2;
-	public AudioClip Song3;
-	public AudioClip Song4;
 
+	public AudioMixerSnapshot tutorialBegin; 
+	public AudioMixerSnapshot tutorialPuzzle1;
+	public AudioMixerSnapshot tutorialPuzzle2;
+	public AudioMixerSnapshot tutorialPuzzle3;
 
 
 	// Use this for initialization
@@ -20,24 +21,27 @@ public class MusicManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (!audio.isPlaying && PuzzleStatus == "Beginning") {
-            audio.clip = Song1;
-            audio.Play();
+
+
+
+
+		if (PuzzleStatus == "Beginning") {
+			tutorialBegin.TransitionTo (0.2f);
         }
 
-		if (!audio.isPlaying && PuzzleStatus == "Puzzle1") {
-            audio.clip = Song2;
-            audio.Play();
+		if (PuzzleStatus == "Puzzle1") {
+			tutorialPuzzle1.TransitionTo (0.2f);
+
         }
 
-		if (!audio.isPlaying && PuzzleStatus == "Puzzle2") {
-            audio.clip = Song3;
-            audio.Play();
+		if (PuzzleStatus == "Puzzle2") {
+			tutorialPuzzle2.TransitionTo (0.2f);
+
         }
 
-		if (!audio.isPlaying && PuzzleStatus == "Puzzle3") {
-            audio.clip = Song4;
-            audio.Play();
+		if (PuzzleStatus == "Puzzle3") {
+			tutorialPuzzle3.TransitionTo (0.2f);
+
         }
 	}
 }

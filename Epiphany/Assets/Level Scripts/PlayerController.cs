@@ -67,7 +67,10 @@ public class PlayerController : MonoBehaviour {
 			BridgeStatus = BridgeCubes.GetComponent<BridgeStates> ();
 			BridgeStatus.BridgeState1 = true;
 
-//			Music.PuzzleStatus = "Puzzle1";
+		//reference to music manager to change the song
+			GameObject Player = GameObject.FindGameObjectWithTag("Player");
+			Music = Player.GetComponent<MusicManager> ();
+			Music.PuzzleStatus = "Puzzle1";
 
 		}
 		//Collectibles 4-6 Correct Sequence
@@ -83,8 +86,10 @@ public class PlayerController : MonoBehaviour {
 		if (isCollecting == "Fifth" && trigger.gameObject.CompareTag("PickUp6")){
 			trigger.gameObject.SetActive (false);
 			isCollecting = "Sixth";
-//			Music.Puzzle2 = true;
-//			Music.Puzzle1 = false;
+			//reference to music manager to change the song
+			GameObject Player = GameObject.FindGameObjectWithTag("Player");
+			Music = Player.GetComponent<MusicManager> ();
+			Music.PuzzleStatus = "Puzzle2";
 
 //			yield return new WaitForSeconds(0.5f);
 //			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -110,8 +115,10 @@ public class PlayerController : MonoBehaviour {
 			trigger.gameObject.SetActive (false);
 			isCollecting = "Ninth";
 
-//			Music.Puzzle3 = true;
-//			Music.Puzzle2 = false;
+			//reference to music manager to change the song
+			GameObject Player = GameObject.FindGameObjectWithTag("Player");
+			Music = Player.GetComponent<MusicManager> ();
+			Music.PuzzleStatus = "Puzzle3";
 
 //			yield return new WaitForSeconds(0.5f);
 //			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
