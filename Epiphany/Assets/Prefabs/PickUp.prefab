@@ -13,6 +13,7 @@ GameObject:
   - 23: {fileID: 2364214}
   - 114: {fileID: 11473442}
   - 54: {fileID: 5497526}
+  - 114: {fileID: 11419544}
   m_Layer: 0
   m_Name: PickUp
   m_TagString: PickUp
@@ -92,6 +93,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11419544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8c6ed3cfef04809b5a95ee8347c1ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupGood: {fileID: 8300000, guid: c18fa5d0e3928418a98b295d2ab61282, type: 3}
 --- !u!114 &11473442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -138,6 +151,10 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 0}
+      propertyPath: pickupGood
+      value: 
+      objectReference: {fileID: 8300000, guid: c18fa5d0e3928418a98b295d2ab61282, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 130168}

@@ -5,7 +5,7 @@ using UnityEngine.Audio;
 public class MusicManager : MonoBehaviour {
 
 	public string PuzzleStatus = "Beginning";
-	AudioSource audio;
+	public AudioSource audio;
 
 	public AudioMixerSnapshot tutorialBegin; 
 	public AudioMixerSnapshot tutorialPuzzle1;
