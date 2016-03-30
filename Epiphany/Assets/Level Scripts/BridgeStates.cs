@@ -8,12 +8,9 @@ public class BridgeStates : MonoBehaviour {
 	public bool BridgeState2 = false;
 	public bool BridgeState3 = false;
 
-//	public int BridgeState= 0;
 	public GameObject[] Bridge1;
 	public GameObject[] Bridge2;
 	public GameObject[] Bridge3;
-
-
 
 	// Use this for initialization
 	void Start () {
@@ -23,7 +20,6 @@ public class BridgeStates : MonoBehaviour {
 			form.GetComponent<Renderer> ().enabled = false;
 			form.GetComponent<Collider> ().enabled = false;
 			}
-
 
 		Bridge2 = GameObject.FindGameObjectsWithTag ("Bridge2");
 			foreach(GameObject form in Bridge2) {
@@ -49,8 +45,6 @@ public class BridgeStates : MonoBehaviour {
 			}
 		}
 
-
-
 		if (BridgeState2 == true){
 			foreach(GameObject form in Bridge2) {
 //					yield return new WaitForSeconds(0.01f);
@@ -59,7 +53,6 @@ public class BridgeStates : MonoBehaviour {
 			}
 		}
 
-
 		if (BridgeState3 == true){
 			foreach(GameObject form in Bridge3) {
 //					yield return new WaitForSeconds(0.01f);
@@ -67,6 +60,5 @@ public class BridgeStates : MonoBehaviour {
 					form.GetComponent<Collider> ().enabled = true;
 			}
 		}
-
 	}
 }

@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour {
 	public Color BoostColorReturn;
 	public string isCollecting = "Beginning";
 	public MusicManager Music;
+	public AudioClip PickUp;
 
 	void Start (){
 	 	rb = GetComponent<Rigidbody>();
