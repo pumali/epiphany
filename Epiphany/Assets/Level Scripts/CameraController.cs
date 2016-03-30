@@ -106,10 +106,10 @@ public class CameraController : MonoBehaviour{
 		if (CameraLocation == "OnPuzzle3a")
 		{
 		//direction
-			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle3aCam.position, 100 * Time.deltaTime);
+			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle3aCam.position, 200 * Time.deltaTime);
 
 		//rotation
-			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle3aCam.rotation, 300 * Time.deltaTime);
+			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle3aCam.rotation, 500 * Time.deltaTime);
 
 		}
 
@@ -118,10 +118,10 @@ public class CameraController : MonoBehaviour{
 		if (CameraLocation == "OnPuzzle3b")
 		{
 		//direction
-			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle3bCam.position, 100 * Time.deltaTime);
+			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle3bCam.position, 200 * Time.deltaTime);
 
 		//rotation
-			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle3bCam.rotation, 300 * Time.deltaTime);
+			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle3bCam.rotation, 500 * Time.deltaTime);
 
 		}
 
