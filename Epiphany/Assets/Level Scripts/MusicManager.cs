@@ -26,21 +26,21 @@ public class MusicManager : MonoBehaviour {
 
 
 		if (PuzzleStatus == "Beginning") {
-			tutorialBegin.TransitionTo (0.3f);
+			tutorialBegin.TransitionTo (0f);
         }
 
 		if (PuzzleStatus == "Puzzle1") {
-			tutorialPuzzle1.TransitionTo (0.3f);
+			tutorialPuzzle1.TransitionTo (0f);
 
         }
 
 		if (PuzzleStatus == "Puzzle2") {
-			tutorialPuzzle2.TransitionTo (0.3f);
+			tutorialPuzzle2.TransitionTo (0f);
 
         }
 
 		if (PuzzleStatus == "Puzzle3") {
-			tutorialPuzzle3.TransitionTo (0.3f);
+			tutorialPuzzle3.TransitionTo (0f);
 
         }
 	}
