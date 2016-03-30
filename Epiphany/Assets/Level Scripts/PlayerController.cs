@@ -20,11 +20,9 @@ public class PlayerController : MonoBehaviour {
 	public Color JumpColorReturn;
 	public Color BoostColorChange;
 	public Color BoostColorReturn;
-	public Color CollectibleChange;
-	public Color CollectibleReturn;
 	public string isCollecting = "Beginning";
-
-
+	public MusicManager Music;
+	public AudioClip PickUp;
 
 	void Start (){
 	 	rb = GetComponent<Rigidbody>();
@@ -45,7 +43,7 @@ public class PlayerController : MonoBehaviour {
  		rb.AddForce(movement * speed);
  	}
 
-	IEnumerator OnTriggerEnter(Collider trigger) {
+	void OnTriggerEnter(Collider trigger) {
 
 	//Collectibles 1-3 Correct Sequence
 		if (isCollecting == "Beginning" && trigger.gameObject.CompareTag("PickUp1")){
@@ -60,20 +58,22 @@ public class PlayerController : MonoBehaviour {
 		if (isCollecting == "Second" && trigger.gameObject.CompareTag("PickUp3")){
 			trigger.gameObject.SetActive (false);
 			isCollecting = "Third";
-
-			yield return new WaitForSeconds(0.5f);
-			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
-			MainCamera = Camera.GetComponent<CameraController> ();
-			MainCamera.CameraLocation = "OnSolution1";
-			yield return new WaitForSeconds(1.0f);
+//			yield return new WaitForSeconds(0.5f);
+//			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+//			MainCamera = Camera.GetComponent<CameraController> ();
+//			MainCamera.CameraLocation = "OnSolution1";
+//			yield return new WaitForSeconds(1.0f);
 
 			GameObject BridgeCubes = GameObject.FindGameObjectWithTag("Bridge1");
 			BridgeStatus = BridgeCubes.GetComponent<BridgeStates> ();
 			BridgeStatus.BridgeState1 = true;
+
+		//reference to music manager to change the song
+			GameObject Player = GameObject.FindGameObjectWithTag("Player");
+			Music = Player.GetComponent<MusicManager> ();
+			Music.PuzzleStatus = "Puzzle1";
+
 		}
-
-//test area!!!!!!
-
 		//Collectibles 4-6 Correct Sequence
 		if (isCollecting == "Beginning" && trigger.gameObject.CompareTag("PickUp4")){
 			trigger.gameObject.SetActive (false);
@@ -87,44 +87,134 @@ public class PlayerController : MonoBehaviour {
 		if (isCollecting == "Fifth" && trigger.gameObject.CompareTag("PickUp6")){
 			trigger.gameObject.SetActive (false);
 			isCollecting = "Sixth";
+			//reference to music manager to change the song
+			GameObject Player = GameObject.FindGameObjectWithTag("Player");
+			Music = Player.GetComponent<MusicManager> ();
+			Music.PuzzleStatus = "Puzzle2";
 
-			yield return new WaitForSeconds(0.5f);
-			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
-			MainCamera = Camera.GetComponent<CameraController> ();
-			MainCamera.CameraLocation = "OnSolution2";
-			yield return new WaitForSeconds(1.0f);
+//			yield return new WaitForSeconds(0.5f);
+//			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+//			MainCamera = Camera.GetComponent<CameraController> ();
+//			MainCamera.CameraLocation = "OnSolution2";
+//			yield return new WaitForSeconds(1.0f);
 
-			GameObject BridgeCubes = GameObject.FindGameObjectWithTag("Bridge1");
+			GameObject BridgeCubes = GameObject.FindGameObjectWithTag("Bridge2");
 			BridgeStatus = BridgeCubes.GetComponent<BridgeStates> ();
-			BridgeStatus.BridgeState1 = true;
+			BridgeStatus.BridgeState2 = true;
+		}
+		//Collectibles 7-9 Correct Sequence
+		if (isCollecting == "Beginning" && trigger.gameObject.CompareTag("PickUp7")){
+			trigger.gameObject.SetActive (false);
+			isCollecting = "Seventh";
+		}
+		if (isCollecting == "Seventh" && trigger.gameObject.CompareTag("PickUp8")){
+			trigger.gameObject.SetActive (false);
+			isCollecting = "Eighth";
 		}
 
+		if (isCollecting == "Eighth" && trigger.gameObject.CompareTag("PickUp9")){
+			trigger.gameObject.SetActive (false);
+			isCollecting = "Ninth";
 
-//end of test area!!!
+			//reference to music manager to change the song
+			GameObject Player = GameObject.FindGameObjectWithTag("Player");
+			Music = Player.GetComponent<MusicManager> ();
+			Music.PuzzleStatus = "Puzzle3";
 
-	
+//			yield return new WaitForSeconds(0.5f);
+//			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+//			MainCamera = Camera.GetComponent<CameraController> ();
+//			MainCamera.CameraLocation = "OnSolution2";
+//			yield return new WaitForSeconds(1.0f);
+
+			GameObject BridgeCubes = GameObject.FindGameObjectWithTag("Bridge3");
+			BridgeStatus = BridgeCubes.GetComponent<BridgeStates> ();
+			BridgeStatus.BridgeState3 = true;
+		}
+	}
 //Set Camera Perspective Trigger
+	void OnTriggerStay (Collider trigger){
+	//Puzzle 1 Perspective
 		if (trigger.gameObject.CompareTag("Puzzle1")){
-			if (isCollecting != "Second"){
 				GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
 				MainCamera = Camera.GetComponent<CameraController> ();
 				MainCamera.CameraLocation = "OnPuzzle1";
-			}
+		}
+	//Puzzle 2a Perspective
+		if (trigger.gameObject.CompareTag("Puzzle2a")){
+			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+			MainCamera = Camera.GetComponent<CameraController> ();
+			MainCamera.CameraLocation = "OnPuzzle2a";
+		}
+
+	//Puzzle 2b Perspective
+		if (trigger.gameObject.CompareTag("Puzzle2b")){
+			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+			MainCamera = Camera.GetComponent<CameraController> ();
+			MainCamera.CameraLocation = "OnPuzzle2b";
+		}
+
+	//Puzzle 3a Perspective
+		if (trigger.gameObject.CompareTag("Puzzle3a")){
+			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+			MainCamera = Camera.GetComponent<CameraController> ();
+			MainCamera.CameraLocation = "OnPuzzle3a";
+		}
+
+	//Puzzle 3b Perspective
+		if (trigger.gameObject.CompareTag("Puzzle3b")){
+			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+			MainCamera = Camera.GetComponent<CameraController> ();
+			MainCamera.CameraLocation = "OnPuzzle3b";
 		}
     }
 
 //Revert to Orbiting Camera
 	void OnTriggerExit (Collider camtrigger)
 	{
-		if (camtrigger.gameObject.CompareTag("Puzzle1"))
-			{
+		//exiting Puzzle 1 trigger zone
+		if (camtrigger.gameObject.CompareTag("Puzzle1")){
 			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
 			MainCamera = Camera.GetComponent<CameraController> ();
 			MainCamera.CameraLocation = "OnPlayer";
 			}
+
+		//exiting Puzzle 2a trigger zone
+		if (camtrigger.gameObject.CompareTag("Puzzle2a")){
+
+
+			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+			MainCamera = Camera.GetComponent<CameraController> ();
+			MainCamera.CameraLocation = "OnPlayer";
+			}
+
+		//exiting Puzzle 2b trigger zone
+		if (camtrigger.gameObject.CompareTag("Puzzle2b")){
+
+			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+			MainCamera = Camera.GetComponent<CameraController> ();
+			MainCamera.CameraLocation = "OnPlayer";
+			}
+
+
+		//exiting Puzzle 3a trigger zone
+		if (camtrigger.gameObject.CompareTag("Puzzle3a")){
+
+
+			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+			MainCamera = Camera.GetComponent<CameraController> ();
+			MainCamera.CameraLocation = "OnPlayer";
+			}
+
+		//exiting Puzzle 3b trigger zone
+		if (camtrigger.gameObject.CompareTag("Puzzle3b")){
+
+			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+			MainCamera = Camera.GetComponent<CameraController> ();
+			MainCamera.CameraLocation = "OnPlayer";
+			}
+
 	}
-
-
     //Corruption Cubes
 	IEnumerator OnCollisionEnter(Collision cube) {
 
@@ -169,4 +259,5 @@ public class PlayerController : MonoBehaviour {
 	void ResetSpeed(){
 		speed = 10f;
 	}
+
 }

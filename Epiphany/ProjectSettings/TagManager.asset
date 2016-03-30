@@ -28,6 +28,12 @@ TagManager:
   - PickUp8
   - PickUp9
   - Shield2
+  - Shield3
+  - Puzzle2a
+  - Puzzle2b
+  - Puzzle3a
+  - Puzzle3b
+  - Bridge1Wall
   layers:
   - Default
   - TransparentFX
