@@ -10,6 +10,15 @@ public class CameraController : MonoBehaviour{
 
 	public Transform Puzzle1Cam;
 	public Transform Puzzle1Sol;
+	public Transform Puzzle2aCam;
+	public Transform Puzzle2bCam;
+	public Transform Puzzle3aCam;
+	public Transform Puzzle3bCam;
+
+
+
+
+
 	//perspective mover
 	public float speed;
 
@@ -41,8 +50,6 @@ public class CameraController : MonoBehaviour{
 			Quaternion q = Quaternion.AngleAxis(Input.GetAxis ("Mouse X") * sensitivity, Vector3.up);
 		    offset = q * offset;
 		    transform.position = target.position + offset;
-//		    ROTATION ALTERNATIVE
-//			transform.rotation = q * transform.rotation;
 			transform.LookAt(LookAt);
 		}
 
@@ -69,6 +76,56 @@ public class CameraController : MonoBehaviour{
 			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle1Sol.rotation, 50 * Time.deltaTime);
 
 		}
+
+		//Puzzle 2a Camera
+
+		if (CameraLocation == "OnPuzzle2a")
+		{
+		//direction
+			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle2aCam.position, 50 * Time.deltaTime);
+
+		//rotation
+			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle2aCam.rotation, 150 * Time.deltaTime);
+
+		}
+
+		//Puzzle 2b Camera
+
+		if (CameraLocation == "OnPuzzle2b")
+		{
+		//direction
+			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle2bCam.position, 50 * Time.deltaTime);
+
+		//rotation
+			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle2bCam.rotation, 150 * Time.deltaTime);
+
+		}
+
+		//Puzzle 3a Camera
+
+		if (CameraLocation == "OnPuzzle3a")
+		{
+		//direction
+			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle3aCam.position, 100 * Time.deltaTime);
+
+		//rotation
+			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle3aCam.rotation, 250 * Time.deltaTime);
+
+		}
+
+		//Puzzle 3b Camera
+
+		if (CameraLocation == "OnPuzzle3b")
+		{
+		//direction
+			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle3bCam.position, 100 * Time.deltaTime);
+
+		//rotation
+			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle3bCam.rotation, 250 * Time.deltaTime);
+
+		}
+
+
 
 
 	}
