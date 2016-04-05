@@ -1,11 +1,11 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.Audio;
 
 public class MusicManager : MonoBehaviour {
 
 	public string PuzzleStatus = "Beginning";
-	public AudioSource audio;
+	public AudioSource music;
 
 	public AudioMixerSnapshot tutorialBegin; 
 	public AudioMixerSnapshot tutorialPuzzle1;
@@ -26,21 +26,21 @@ public class MusicManager : MonoBehaviour {
 
 
 		if (PuzzleStatus == "Beginning") {
-			tutorialBegin.TransitionTo (0f);
+			tutorialBegin.TransitionTo (0.2f);
         }
 
 		if (PuzzleStatus == "Puzzle1") {
-			tutorialPuzzle1.TransitionTo (0f);
+			tutorialPuzzle1.TransitionTo (0.2f);
 
         }
 
 		if (PuzzleStatus == "Puzzle2") {
-			tutorialPuzzle2.TransitionTo (0f);
+			tutorialPuzzle2.TransitionTo (0.2f);
 
         }
 
 		if (PuzzleStatus == "Puzzle3") {
-			tutorialPuzzle3.TransitionTo (0f);
+			tutorialPuzzle3.TransitionTo (0.2f);
 
         }
 	}
