@@ -34,8 +34,7 @@ TagManager:
   - Puzzle3a
   - Puzzle3b
   - Bridge1Wall
-  - Puzzle2
-  - PickUp
+  - Light
   layers:
   - Default
   - TransparentFX

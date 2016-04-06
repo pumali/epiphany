@@ -29,6 +29,7 @@ public class DayNightCycle : MonoBehaviour {
 	Skybox sky;
 	Material skyMat;
 
+
 	// Use this for initialization
 	void Start () {
 
@@ -63,7 +64,8 @@ public class DayNightCycle : MonoBehaviour {
 			transform.Rotate (dayRotateSpeed * Time.deltaTime * skySpeed);
 		else
 			transform.Rotate (nightRotateSpeed * Time.deltaTime * skySpeed);
-
+		
+			//control the cycle for testing purposes
 			if (Input.GetKeyDown (KeyCode.Q)) skySpeed *= 0.5f;
 			if (Input.GetKeyDown (KeyCode.E)) skySpeed *= 2f;
 
