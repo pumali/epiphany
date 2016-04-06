@@ -34,6 +34,7 @@ TagManager:
   - Puzzle3a
   - Puzzle3b
   - Bridge1Wall
+  - Light
   layers:
   - Default
   - TransparentFX
@@ -43,7 +44,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Floor
   - 
   - 
   - 
