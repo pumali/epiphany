@@ -66,8 +66,8 @@ public class DayNightCycle : MonoBehaviour {
 			transform.Rotate (nightRotateSpeed * Time.deltaTime * skySpeed);
 		
 			//control the cycle for testing purposes
-			if (Input.GetKeyDown (KeyCode.Q)) skySpeed *= 0.5f;
-			if (Input.GetKeyDown (KeyCode.E)) skySpeed *= 2f;
+			//if (Input.GetKeyDown (KeyCode.Q)) skySpeed *= 0.5f;
+			//if (Input.GetKeyDown (KeyCode.E)) skySpeed *= 2f;
 
 	}
 }
