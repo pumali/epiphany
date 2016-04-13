@@ -15,7 +15,7 @@ public class MusicManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	audio = GetComponent<AudioSource>();
+	music = GetComponent<AudioSource>();
 	}
 
 	// Update is called once per frame
