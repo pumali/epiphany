@@ -5,18 +5,18 @@ using System.Collections;
 public class PickupAudio : MonoBehaviour {
 
 	public AudioClip pickupGood; 
-	public AudioClip pickupBad; 
 
-    IEnumerator OnTriggerEnter(Collider Pickup1) 
+	IEnumerator OnTriggerEnter(Collider other)
 	{
-		IEnumerator Start;	 
+
+		IEnumerator Start;
 		{
 			AudioSource audio = GetComponent<AudioSource>();
 
 			audio.Play();
 			yield return new WaitForSeconds (audio.clip.length);
 			audio.clip = pickupGood; 
-
+	
 		}
 	}
 }
