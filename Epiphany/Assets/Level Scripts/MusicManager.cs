@@ -29,17 +29,17 @@ public class MusicManager : MonoBehaviour {
 			tutorialBegin.TransitionTo (0.2f);
         }
 
-		if (PuzzleStatus == "Puzzle1") {
+		else if (PuzzleStatus == "Puzzle1") {
 			tutorialPuzzle1.TransitionTo (0.2f);
 
         }
 
-		if (PuzzleStatus == "Puzzle2") {
+		else if (PuzzleStatus == "Puzzle2") {
 			tutorialPuzzle2.TransitionTo (0.2f);
 
         }
 
-		if (PuzzleStatus == "Puzzle3") {
+		else if (PuzzleStatus == "Puzzle3") {
 			tutorialPuzzle3.TransitionTo (0.2f);
 
         }

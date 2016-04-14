@@ -4,19 +4,14 @@ using System.Collections;
 [RequireComponent(typeof(AudioSource))]
 public class PickupAudio : MonoBehaviour {
 
-	public AudioClip pickupGood; 
+	public AudioSource pickup; 
 
-	IEnumerator OnTriggerEnter(Collider other)
+ IEnumerator OnTriggerEnter(Collider other)
 	{
+		if (other.gameObject.tag == "Player") {
 
-		IEnumerator Start;
-		{
-			AudioSource audio = GetComponent<AudioSource>();
-
-			audio.Play();
-			yield return new WaitForSeconds (audio.clip.length);
-			audio.clip = pickupGood; 
-	
+			//Debug.Log ("about to play pickup " + other.gameObject.tag);
+			GetComponent<AudioSource>().Play(); 
 		}
 	}
 }
