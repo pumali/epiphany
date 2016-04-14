@@ -9,18 +9,38 @@ public class PickupAudio : MonoBehaviour {
 
 	private AudioSource sound; 
 
+	public AudioClip[] myAudios = new AudioClip[3];
+	public PlayerController myplr;
+
 	void Awake ()
 	{ 
-		sound = GetComponent<AudioSource> (); 
+		sound = GetComponent<AudioSource>();
+		myplr = FindObjectOfType<PlayerController>();
+
 	}
 
 	void Update ()
 	{
-	 OnTriggerEnter (Collider other) 
-		{
-			if (other.gameObject.tag == "Player") {
-		sound.Play ()  
+
+
+
 	}
-}
+
+
+	void OnTriggerEnter(Collider other) {
+		
+		if (other.gameObject.tag =="Player"  ) {
+				Debug.Log ("collider entred");
+
+			if (myplr.isCollecting == "First") {
+				//play sound 1 	
+				sound.clip = myAudios[0];
+				sound.Play ();
+				Debug.Log ("you played thiss sound from here");
+
+			}
+//			sound.clip = pickupSound;
+//			sound.Play();  
+		}
 	}
 }
