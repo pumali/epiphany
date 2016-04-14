@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour {
 	public Color BoostColorReturn;
 	public string isCollecting = "Beginning";
 	public MusicManager Music;
-	public AudioClip PickUp;
 
 	void Start (){
 	 	rb = GetComponent<Rigidbody>();
@@ -46,9 +45,13 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter(Collider trigger) {
 
 	//Collectibles 1-3 Correct Sequence
-		if (isCollecting == "Beginning" && trigger.gameObject.CompareTag("PickUp1")){
+		if (isCollecting == "Beginning" && trigger.gameObject.CompareTag ("PickUp1"))
+			Debug.Log("found state and trigger");
+		{
 			trigger.gameObject.SetActive (false);
+			Debug.Log ("set trigger to false");
 			isCollecting = "First";
+			Debug.Log ("sets state to First"); 
 		}
 		if (isCollecting == "First" && trigger.gameObject.CompareTag("PickUp2")){
 			trigger.gameObject.SetActive (false);
