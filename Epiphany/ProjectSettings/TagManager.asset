@@ -34,6 +34,13 @@ TagManager:
   - Puzzle3a
   - Puzzle3b
   - Bridge1Wall
+  - Puzzle2
+  - PickUp
+  - Tower2_1
+  - MovementCube
+  - Tower2_2
+  - Tower2_3
+  - Tower2_4
   layers:
   - Default
   - TransparentFX
