@@ -34,6 +34,7 @@ TagManager:
   - Puzzle3a
   - Puzzle3b
   - Bridge1Wall
+<<<<<<< HEAD
   - Puzzle2
   - PickUp
   - Tower2_1
@@ -41,6 +42,9 @@ TagManager:
   - Tower2_2
   - Tower2_3
   - Tower2_4
+=======
+  - Light
+>>>>>>> master
   layers:
   - Default
   - TransparentFX
@@ -50,7 +54,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Floor
   - 
   - 
   - 
