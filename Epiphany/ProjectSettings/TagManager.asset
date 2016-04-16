@@ -3,38 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - CorruptionCube
-  - JumpCube
-  - BoostCube
-  - PickUp1
-  - PickUp2
-  - PickUp3
-  - Bridge1
-  - CameraTarget
-  - Puzzle1
-  - Solution1
-  - CameraLocation2
-  - GoalLight
-  - Goal
-  - Wave
-  - Shield1
-  - Bridge2
-  - Bridge3
-  - PickUp4
-  - PickUp5
-  - PickUp6
-  - PickUp7
-  - PickUp8
-  - PickUp9
-  - Shield2
-  - Shield3
-  - Puzzle2a
-  - Puzzle2b
-  - Puzzle3a
-  - Puzzle3b
-  - Bridge1Wall
-  - Light
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -44,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - Floor
+  - 
   - 
   - 
   - 
