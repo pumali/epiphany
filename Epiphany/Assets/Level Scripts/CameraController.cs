@@ -20,10 +20,25 @@ public class CameraController : MonoBehaviour{
 
 
 	//perspective mover
-	public float speed;
+	public float speed1a;
+	public float turningRate1a;
 
-	//rotator
-	public float turningRate;
+	public float speed1b;
+	public float turningRate1b;
+
+
+	public float speed2a;
+	public float turningRate2a;
+
+	public float speed2b;
+	public float turningRate2b;
+
+
+	public float speed3a;
+	public float turningRate3a;
+
+	public float speed3b;
+	public float turningRate3b;
 
 	public Transform target;
     public float distance = 10.0f;
@@ -58,10 +73,10 @@ public class CameraController : MonoBehaviour{
 		if (CameraLocation == "OnPuzzle1")
 		{
 		//direction
-			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle1Cam.position, speed * Time.deltaTime);
+			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle1Cam.position, speed1a * Time.deltaTime);
 
 		//rotation
-			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle1Cam.rotation, turningRate * Time.deltaTime);
+			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle1Cam.rotation, turningRate1a * Time.deltaTime);
 
 		}
 
@@ -82,10 +97,10 @@ public class CameraController : MonoBehaviour{
 		if (CameraLocation == "OnPuzzle2a")
 		{
 		//direction
-			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle2aCam.position, 50 * Time.deltaTime);
+			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle2aCam.position, speed2a * Time.deltaTime);
 
 		//rotation
-			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle2aCam.rotation, 150 * Time.deltaTime);
+			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle2aCam.rotation, turningRate2a * Time.deltaTime);
 
 		}
 
@@ -94,10 +109,10 @@ public class CameraController : MonoBehaviour{
 		if (CameraLocation == "OnPuzzle2b")
 		{
 		//direction
-			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle2bCam.position, 50 * Time.deltaTime);
+			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle2bCam.position, speed2b * Time.deltaTime);
 
 		//rotation
-			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle2bCam.rotation, 150 * Time.deltaTime);
+			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle2bCam.rotation, turningRate2b * Time.deltaTime);
 
 		}
 
@@ -106,10 +121,10 @@ public class CameraController : MonoBehaviour{
 		if (CameraLocation == "OnPuzzle3a")
 		{
 		//direction
-			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle3aCam.position, 100 * Time.deltaTime);
+			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle3aCam.position, speed3a * Time.deltaTime);
 
 		//rotation
-			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle3aCam.rotation, 250 * Time.deltaTime);
+			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle3aCam.rotation, turningRate3a * Time.deltaTime);
 
 		}
 
@@ -118,10 +133,10 @@ public class CameraController : MonoBehaviour{
 		if (CameraLocation == "OnPuzzle3b")
 		{
 		//direction
-			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle3bCam.position, 100 * Time.deltaTime);
+			transform.localPosition = Vector3.MoveTowards(transform.localPosition, Puzzle3bCam.position, speed3b * Time.deltaTime);
 
 		//rotation
-			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle3bCam.rotation, 250 * Time.deltaTime);
+			transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Puzzle3bCam.rotation, turningRate3b * Time.deltaTime);
 
 		}
 
