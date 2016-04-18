@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/NarrativePre-Level1.unity
+    path: Assets/TutorialNarrative.unity
   - enabled: 1
     path: Assets/Tutorial.unity
   - enabled: 1
