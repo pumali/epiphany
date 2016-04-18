@@ -5,6 +5,7 @@ using System.Collections;
 public class PickupAudio : MonoBehaviour {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	public string pickUpState = "Beginning";
 
@@ -48,13 +49,21 @@ public class PickupAudio : MonoBehaviour {
 }
 =======
 	public AudioSource pickup; 
+=======
+	public AudioClip pickupGood; 
+>>>>>>> parent of 9d10156... worked with josh
 
- IEnumerator OnTriggerEnter(Collider other)
+	IEnumerator OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.tag == "Player") {
 
-			//Debug.Log ("about to play pickup " + other.gameObject.tag);
-			GetComponent<AudioSource>().Play(); 
+		IEnumerator Start;
+		{
+			AudioSource audio = GetComponent<AudioSource>();
+
+			audio.Play();
+			yield return new WaitForSeconds (audio.clip.length);
+			audio.clip = pickupGood; 
+	
 		}
 	}
 }
