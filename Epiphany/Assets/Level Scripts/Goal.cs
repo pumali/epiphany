@@ -4,10 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class Goal : MonoBehaviour {
 
-public GameObject PickUpParticleEffect;
+	public GameObject PickUpParticleEffect;
 
-public GameObject Light;
-public float fadeTime = 0.8f;
+	public GameObject Light;
+	public float fadeTime = 0.8f;
+	public int NextLevel;
 
 	void OnTriggerEnter(Collider trigger) 
 	{
@@ -23,7 +24,7 @@ public float fadeTime = 0.8f;
 	}
 
 	void SceneChange(){
-			SceneManager.LoadScene(1);
+			SceneManager.LoadScene(NextLevel);
 	}
 
 }
