@@ -26,7 +26,7 @@ public float fadeTime = 0.8f;
 
 			fadeTime = GameObject.Find("Player").GetComponent<Fading>().BeginFade(1);
 			yield return new WaitForSeconds(fadeTime);
-			SceneManager.LoadScene(0 + 1);
+			SceneManager.LoadScene("Level1");
 			}
 	
 	}
