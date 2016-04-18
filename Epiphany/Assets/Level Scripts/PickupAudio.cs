@@ -4,9 +4,8 @@ using System.Collections;
 [RequireComponent(typeof(AudioSource))]
 public class PickupAudio : MonoBehaviour {
 
-	public AudioClip pickupSound; 
-	public AudioClip fastforward; 
-	public string isCollecting = "Beginning";
+
+	public string pickUpState = "Beginning";
 
 	private AudioSource sound; 
 
@@ -19,27 +18,30 @@ public class PickupAudio : MonoBehaviour {
 
 	}
 		
+	//reference to playercontroller script to check PickUp state
+	GameObject Player = GameObject.FindGameObjectWithTag("Player");
+	//pickUpState = Player.GetComponent<PlayerController>();
+
 	void OnTriggerEnter (Collider other)
 	{
 		
-		if (other.gameObject.tag == "Player" && isCollecting == "First")
+
+		if (other.gameObject.tag == "Player" && pickUpState == "First")
 			Debug.Log ("found collider trigger"); 
 		{
 				sound.clip = myAudios[0];
 				Debug.Log ("found clip from array");
-			sound.Play();
-			Debug.Log ("played clip"); 
+				sound.Play();
+				Debug.Log ("played clip"); 
 		
 
-		 if (other.gameObject.tag == "Player" && isCollecting != "First")
+			if (other.gameObject.tag == "Player" && pickUpState != "First")
 		{
-			sound.clip = myAudios [4]; 
-			sound.Play(); 
-			Debug.Log ("played bad sound"); 
+
 		}
 		}
 	}
 //			sound.clip = pickupSound;
 //			sound.Play();  
 
-	}
+}
