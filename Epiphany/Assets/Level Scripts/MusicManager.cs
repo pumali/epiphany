@@ -22,6 +22,9 @@ public class MusicManager : MonoBehaviour {
 	void Update () {
 
 
+
+
+
 		if (PuzzleStatus == "Beginning") {
 			tutorialBegin.TransitionTo (0.2f);
         }
