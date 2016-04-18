@@ -1,24 +1,19 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
+
 
 public class TrackFade : MonoBehaviour {
 
+	public int NextScene;
+	public float fadeTime = 0.8f;
+
 	// Use this for initialization
 	IEnumerator Start () {
-
 	yield return new WaitForSeconds(3);
 	gameObject.SetActive(false);
-	yield return new WaitForSeconds(2);
 
-
+	SceneManager.LoadScene(NextScene);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-
-
 }
