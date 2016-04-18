@@ -12,7 +12,7 @@ public class Goal : MonoBehaviour {
 
 	void OnTriggerEnter(Collider trigger) 
 	{
-		if (trigger.gameObject.CompareTag("Player") && gameObject.CompareTag("Goal"))
+		if (trigger.gameObject.CompareTag("Player"))
 			{
 			gameObject.SetActive (false);
 			Light.SetActive (false);
