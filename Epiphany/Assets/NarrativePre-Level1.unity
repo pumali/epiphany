@@ -204,6 +204,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffe56c6773f6471eb8888f60caca270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NextScene: 1
+  fadeTime: 0.8
 --- !u!114 &229339911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,6 +517,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
