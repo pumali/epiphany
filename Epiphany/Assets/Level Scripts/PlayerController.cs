@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
+	public GameObject PickUpParticleEffect;
 	public BridgeStates BridgeStatus;
 	public CameraController MainCamera;
 	public Transform cam;
@@ -48,15 +49,18 @@ public class PlayerController : MonoBehaviour {
 	//Collectibles 1-3 Correct Sequence
 		if (isCollecting == "Beginning" && trigger.gameObject.CompareTag("PickUp1")){
 			trigger.gameObject.SetActive (false);
+			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "First";
 		}
 		if (isCollecting == "First" && trigger.gameObject.CompareTag("PickUp2")){
 			trigger.gameObject.SetActive (false);
+			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Second";
 		}
 
 		if (isCollecting == "Second" && trigger.gameObject.CompareTag("PickUp3")){
 			trigger.gameObject.SetActive (false);
+			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Third";
 //			yield return new WaitForSeconds(0.5f);
 //			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -77,15 +81,18 @@ public class PlayerController : MonoBehaviour {
 		//Collectibles 4-6 Correct Sequence
 		if (isCollecting == "Beginning" && trigger.gameObject.CompareTag("PickUp4")){
 			trigger.gameObject.SetActive (false);
+			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Fourth";
 		}
 		if (isCollecting == "Fourth" && trigger.gameObject.CompareTag("PickUp5")){
 			trigger.gameObject.SetActive (false);
+			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Fifth";
 		}
 
 		if (isCollecting == "Fifth" && trigger.gameObject.CompareTag("PickUp6")){
 			trigger.gameObject.SetActive (false);
+			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Sixth";
 			//reference to music manager to change the song
 			GameObject Player = GameObject.FindGameObjectWithTag("Player");
@@ -105,15 +112,18 @@ public class PlayerController : MonoBehaviour {
 		//Collectibles 7-9 Correct Sequence
 		if (isCollecting == "Beginning" && trigger.gameObject.CompareTag("PickUp7")){
 			trigger.gameObject.SetActive (false);
+			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Seventh";
 		}
 		if (isCollecting == "Seventh" && trigger.gameObject.CompareTag("PickUp8")){
 			trigger.gameObject.SetActive (false);
+			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Eighth";
 		}
 
 		if (isCollecting == "Eighth" && trigger.gameObject.CompareTag("PickUp9")){
 			trigger.gameObject.SetActive (false);
+			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Ninth";
 
 			//reference to music manager to change the song

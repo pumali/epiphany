@@ -3,7 +3,42 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Respawn
+  - Finish
+  - EditorOnly
+  - MainCamera
+  - Player
+  - GameController
+  - CameraLocation2
+  - Puzzle2
+  - Puzzle1
+  - Puzzle2a
+  - Puzzle2b
+  - CameraTarget
+  - Puzzle3a
+  - GoalLight
+  - Puzzle3b
+  - Bridge1
+  - PickUp1
+  - Bridge2
+  - Bridge3
+  - PickUp3
+  - Shield1
+  - PickUp7
+  - PickUp9
+  - PickUp6
+  - Shield3
+  - PickUp4
+  - PickUp8
+  - Bridge1Wall
+  - PickUp5
+  - Goal
+  - PickUp2
+  - JumpCube
+  - CorruptionCube
+  - Light
+  - Shield2
   layers:
   - Default
   - TransparentFX
