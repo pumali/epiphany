@@ -10,14 +10,12 @@ TagManager:
   - MainCamera
   - Player
   - GameController
-  - CameraLocation2
   - Puzzle2
   - Puzzle1
   - Puzzle2a
   - Puzzle2b
   - CameraTarget
   - Puzzle3a
-  - GoalLight
   - Puzzle3b
   - Bridge1
   - PickUp1
@@ -31,7 +29,6 @@ TagManager:
   - Shield3
   - PickUp4
   - PickUp8
-  - Bridge1Wall
   - PickUp5
   - Goal
   - PickUp2
@@ -39,6 +36,11 @@ TagManager:
   - CorruptionCube
   - Light
   - Shield2
+  - BoostCube
+  - Cryptic1
+  - Cryptic2
+  - Cryptic3
+  - Cryptic4
   layers:
   - Default
   - TransparentFX
