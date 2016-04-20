@@ -21,9 +21,20 @@ public class PlayerController : MonoBehaviour {
 	public Color JumpColorReturn;
 	public Color BoostColorChange;
 	public Color BoostColorReturn;
+	public Color Cryptic1ColorChange;
+	public Color Cryptic1ColorReturn;
+	public Color Cryptic2ColorChange;
+	public Color Cryptic2ColorReturn;
+	public Color Cryptic3ColorChange;
+	public Color Cryptic3ColorReturn;
+	public Color Cryptic4ColorChange;
+	public Color Cryptic4ColorReturn;
+
 	public string isCollecting = "Beginning";
 	public MusicManager Music;
 	public AudioClip PickUp;
+
+	public string isCryptic = "Start";
 
 	void Start (){
 	 	rb = GetComponent<Rigidbody>();
@@ -265,9 +276,43 @@ public class PlayerController : MonoBehaviour {
 			yield return new WaitForSeconds(0.25f);
 			cube.gameObject.GetComponent<Renderer>().material.color = BoostColorReturn;
 		}
+
+		if (cube.gameObject.tag == "Cryptic1"){
+			//Color Change
+		cube.gameObject.GetComponent<Renderer> ().material.color = Cryptic1ColorChange;
+		}
+
+		if (cube.gameObject.tag == "Cryptic2"){
+			//Color Change
+		cube.gameObject.GetComponent<Renderer> ().material.color = Cryptic2ColorChange;
+		}
+
+		if (cube.gameObject.tag == "Cryptic3"){
+			//Color Change
+		cube.gameObject.GetComponent<Renderer> ().material.color = Cryptic3ColorChange;
+		}
+
+		if (cube.gameObject.tag == "Cryptic4"){
+			//Color Change
+		cube.gameObject.GetComponent<Renderer> ().material.color = Cryptic4ColorChange;
+		}
+	}
+
+	void OnCollisionExit(Collision cube) {
+		if (cube.gameObject.tag == "Cryptic1"){
+			cube.gameObject.GetComponent<Renderer> ().material.color = Cryptic1ColorReturn;
+		}
+		if (cube.gameObject.tag == "Cryptic2"){
+			cube.gameObject.GetComponent<Renderer> ().material.color = Cryptic2ColorReturn;
+		}
+		if (cube.gameObject.tag == "Cryptic3"){
+			cube.gameObject.GetComponent<Renderer> ().material.color = Cryptic3ColorReturn;
+		}
+		if (cube.gameObject.tag == "Cryptic4"){
+			cube.gameObject.GetComponent<Renderer> ().material.color = Cryptic4ColorReturn;
+		}
 	}
 	void ResetSpeed(){
 		speed = 10f;
 	}
-
 }
