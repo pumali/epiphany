@@ -25,9 +25,11 @@ AudioMixerController:
     - f62d277f3ce9548ff9b70119746150f4
     - dfc6ad3e343de44c29c22b3d25b9f60d
     - f2a4e2482b38c4a3c9f6f5e68f8f0a19
+    - ff9c263fbb01d4e86bf28970913d324b
+    - 100d382648c444a0489f6c6e738323c4
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 24580988}
+  m_TargetSnapshot: {fileID: 24550896}
 --- !u!243 &24300001
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -41,6 +43,8 @@ AudioMixerGroupController:
   - {fileID: 24346726}
   - {fileID: 24315186}
   - {fileID: 24314036}
+  - {fileID: 24363008}
+  - {fileID: 24349432}
   m_Volume: ac95acf97564b48ca847be36a4c4090b
   m_Pitch: 8ea244741e2c145f4bfa3ed96fa2185b
   m_Effects:
@@ -117,6 +121,40 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!243 &24349432
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Howling Wind
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: ff9c263fbb01d4e86bf28970913d324b
+  m_Children: []
+  m_Volume: feaf19538d8f24dfa88b2e1acc9992c2
+  m_Pitch: fa10bed1ea7514b28944f8fdbfbde836
+  m_Effects:
+  - {fileID: 24449616}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &24363008
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Seagull
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 100d382648c444a0489f6c6e738323c4
+  m_Children: []
+  m_Volume: 026730f600e344068a925303ed2fc908
+  m_Pitch: 77c9ef63b953a4a58b4e4f10c03659e4
+  m_Effects:
+  - {fileID: 24474906}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!244 &24400002
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -169,6 +207,32 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &24449616
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 059b21a96c9fd4a3785ca185c6cae288
+  m_EffectName: Attenuation
+  m_MixLevel: 7686d231ab08f43fd818c9cb48f2192a
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &24474906
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 0d8aeffce245c4e439d8d8bf177721a8
+  m_EffectName: Attenuation
+  m_MixLevel: 294484238e5bb43278eb90c918c2a6cc
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &24491364
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -204,7 +268,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 7858d74eee789486c87243b1cf79978a
   m_FloatValues:
-    bfbfc85077e264d5daea12a6bbd3bac7: .10800299
+    bfbfc85077e264d5daea12a6bbd3bac7: 0.10800299
     c667a3f0f7b1b46c48f5493ca76154e7: -80
     e0a097e7d02a14b32b7203f0a87eff93: -80
     ee7eaaeccad0a40099c8b4d68fa2e2ad: -80
@@ -219,7 +283,8 @@ AudioMixerSnapshotController:
   m_SnapshotID: 8dfcc87af7da54a97bb4b2af79f78f06
   m_FloatValues:
     bfbfc85077e264d5daea12a6bbd3bac7: -80
-    c667a3f0f7b1b46c48f5493ca76154e7: -.00244187191
+    c667a3f0f7b1b46c48f5493ca76154e7: -0.002441872
+    7d1005b32d39242ed82bbba6e6b334ec: 0
     e0a097e7d02a14b32b7203f0a87eff93: -80
     ee7eaaeccad0a40099c8b4d68fa2e2ad: -80
   m_TransitionOverrides: {}
@@ -235,7 +300,7 @@ AudioMixerSnapshotController:
     bfbfc85077e264d5daea12a6bbd3bac7: -80
     c667a3f0f7b1b46c48f5493ca76154e7: -80
     e0a097e7d02a14b32b7203f0a87eff93: -80
-    ee7eaaeccad0a40099c8b4d68fa2e2ad: .0255785119
+    ee7eaaeccad0a40099c8b4d68fa2e2ad: 0.025578512
   m_TransitionOverrides: {}
 --- !u!245 &24595622
 AudioMixerSnapshotController:
@@ -248,6 +313,6 @@ AudioMixerSnapshotController:
   m_FloatValues:
     bfbfc85077e264d5daea12a6bbd3bac7: -80
     c667a3f0f7b1b46c48f5493ca76154e7: -80
-    e0a097e7d02a14b32b7203f0a87eff93: .0255785119
+    e0a097e7d02a14b32b7203f0a87eff93: 0.025578512
     ee7eaaeccad0a40099c8b4d68fa2e2ad: -80
   m_TransitionOverrides: {}

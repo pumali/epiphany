@@ -24,38 +24,34 @@ public class MusicManager : MonoBehaviour {
     void Update()
     {
 
-        if (PuzzleStatus == "Beginning")
+		if (PuzzleStatus == "Beginning" && statusPickup == "First")
         {
-            songSnapshots[0].TransitionTo(0f);
+            songSnapshots[0].TransitionTo(0.4f);
+			Debug.Log("plays music from MusicManager");
         }
+
+		else if (PuzzleStatus == "Beginning" && statusPickup == "Second")
+		{
+			songSnapshots[0].TransitionTo(0.4f);
+		}
 
         else if (PuzzleStatus == "Puzzle1")
         {
-            songSnapshots[1].TransitionTo(0f);
+			songSnapshots[1].TransitionTo(0.4f);
 
         }
 
         else if (PuzzleStatus == "Puzzle2")
         {
-            songSnapshots[2].TransitionTo(0f);
+			songSnapshots[2].TransitionTo(0.4f);
 
         }
 
         else if (PuzzleStatus == "Puzzle3")
         {
-            songSnapshots[3].TransitionTo(0f);
+			songSnapshots[3].TransitionTo(0.4f);
         }
-
- 
-
-         else if (statusPickup == "First")
-            {
-
-                PuzzleStatus = "Beginning";
-                Debug.Log("plays music again");
-
-            }
-        }
-
-    }
+			
+     }
+}	
 
