@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -33,6 +34,8 @@ public class PlayerController : MonoBehaviour {
 	public string isCollecting = "Beginning";
 	public MusicManager Music;
 	public AudioClip PickUp;
+	public float fadeTime = 0.4f;
+
 
 	public string isCryptic = "Start";
 
@@ -73,6 +76,7 @@ public class PlayerController : MonoBehaviour {
 			trigger.gameObject.SetActive (false);
 			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Third";
+
 //			yield return new WaitForSeconds(0.5f);
 //			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
 //			MainCamera = Camera.GetComponent<CameraController> ();
@@ -277,6 +281,7 @@ public class PlayerController : MonoBehaviour {
 			cube.gameObject.GetComponent<Renderer>().material.color = BoostColorReturn;
 		}
 
+	//Cryptic Puzzle
 		if (cube.gameObject.tag == "Cryptic1"){
 			//Color Change
 		cube.gameObject.GetComponent<Renderer> ().material.color = Cryptic1ColorChange;
@@ -296,6 +301,29 @@ public class PlayerController : MonoBehaviour {
 			//Color Change
 		cube.gameObject.GetComponent<Renderer> ().material.color = Cryptic4ColorChange;
 		}
+
+		//Cryptic Puzzle Sequence
+		if (cube.gameObject.CompareTag("Cryptic1")){
+			isCryptic = "First";
+		}
+
+		if (cube.gameObject.CompareTag("Cryptic2") && isCryptic == "First"){
+			isCryptic = "Second";
+		}
+
+		if (cube.gameObject.CompareTag("Cryptic3") && isCryptic == "Second"){
+			isCryptic = "Third";
+		}
+
+		if (cube.gameObject.CompareTag("Cryptic4") && isCryptic == "Third"){
+			isCryptic = "Fourth";
+			fadeTime = GameObject.Find("Player").GetComponent<Fading>().BeginFade(1);
+			Invoke ("SceneChange", fadeTime);
+		}
+	}
+
+	void SceneChange(){
+		SceneManager.LoadScene("Final");
 	}
 
 	void OnCollisionExit(Collision cube) {
