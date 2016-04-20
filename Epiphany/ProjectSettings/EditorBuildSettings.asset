@@ -10,6 +10,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tutorial.unity
   - enabled: 1
+    path: Assets/TutorialPostNarrative.unity
+  - enabled: 1
     path: Assets/Level1PreNarrative.unity
   - enabled: 1
     path: Assets/Level1.unity
+  - enabled: 1
+    path: Assets/Level1PostNarrative.unity
