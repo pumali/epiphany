@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -21,9 +22,22 @@ public class PlayerController : MonoBehaviour {
 	public Color JumpColorReturn;
 	public Color BoostColorChange;
 	public Color BoostColorReturn;
+	public Color Cryptic1ColorChange;
+	public Color Cryptic1ColorReturn;
+	public Color Cryptic2ColorChange;
+	public Color Cryptic2ColorReturn;
+	public Color Cryptic3ColorChange;
+	public Color Cryptic3ColorReturn;
+	public Color Cryptic4ColorChange;
+	public Color Cryptic4ColorReturn;
+
 	public string isCollecting = "Beginning";
 	public MusicManager Music;
 	public AudioClip PickUp;
+	public float fadeTime = 0.4f;
+
+
+	public string isCryptic = "Start";
 
 	void Start (){
 	 	rb = GetComponent<Rigidbody>();
@@ -62,6 +76,7 @@ public class PlayerController : MonoBehaviour {
 			trigger.gameObject.SetActive (false);
 			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Third";
+
 //			yield return new WaitForSeconds(0.5f);
 //			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
 //			MainCamera = Camera.GetComponent<CameraController> ();
@@ -265,9 +280,67 @@ public class PlayerController : MonoBehaviour {
 			yield return new WaitForSeconds(0.25f);
 			cube.gameObject.GetComponent<Renderer>().material.color = BoostColorReturn;
 		}
+
+	//Cryptic Puzzle
+		if (cube.gameObject.tag == "Cryptic1"){
+			//Color Change
+		cube.gameObject.GetComponent<Renderer> ().material.color = Cryptic1ColorChange;
+		}
+
+		if (cube.gameObject.tag == "Cryptic2"){
+			//Color Change
+		cube.gameObject.GetComponent<Renderer> ().material.color = Cryptic2ColorChange;
+		}
+
+		if (cube.gameObject.tag == "Cryptic3"){
+			//Color Change
+		cube.gameObject.GetComponent<Renderer> ().material.color = Cryptic3ColorChange;
+		}
+
+		if (cube.gameObject.tag == "Cryptic4"){
+			//Color Change
+		cube.gameObject.GetComponent<Renderer> ().material.color = Cryptic4ColorChange;
+		}
+
+		//Cryptic Puzzle Sequence
+		if (cube.gameObject.CompareTag("Cryptic1")){
+			isCryptic = "First";
+		}
+
+		if (cube.gameObject.CompareTag("Cryptic2") && isCryptic == "First"){
+			isCryptic = "Second";
+		}
+
+		if (cube.gameObject.CompareTag("Cryptic3") && isCryptic == "Second"){
+			isCryptic = "Third";
+		}
+
+		if (cube.gameObject.CompareTag("Cryptic4") && isCryptic == "Third"){
+			isCryptic = "Fourth";
+			fadeTime = GameObject.Find("Player").GetComponent<Fading>().BeginFade(1);
+			Invoke ("SceneChange", fadeTime);
+		}
+	}
+
+	void SceneChange(){
+		SceneManager.LoadScene("Final");
+	}
+
+	void OnCollisionExit(Collision cube) {
+		if (cube.gameObject.tag == "Cryptic1"){
+			cube.gameObject.GetComponent<Renderer> ().material.color = Cryptic1ColorReturn;
+		}
+		if (cube.gameObject.tag == "Cryptic2"){
+			cube.gameObject.GetComponent<Renderer> ().material.color = Cryptic2ColorReturn;
+		}
+		if (cube.gameObject.tag == "Cryptic3"){
+			cube.gameObject.GetComponent<Renderer> ().material.color = Cryptic3ColorReturn;
+		}
+		if (cube.gameObject.tag == "Cryptic4"){
+			cube.gameObject.GetComponent<Renderer> ().material.color = Cryptic4ColorReturn;
+		}
 	}
 	void ResetSpeed(){
 		speed = 10f;
 	}
-
 }

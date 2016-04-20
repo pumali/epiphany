@@ -13,6 +13,7 @@ GameObject:
   - 23: {fileID: 2392752}
   - 54: {fileID: 5478214}
   - 114: {fileID: 11428732}
+  - 114: {fileID: 11457384}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -91,6 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e4bbcade18434bf1a43e90c8048d8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PickUpParticleEffect: {fileID: 0}
+  BridgeStatus: {fileID: 0}
   MainCamera: {fileID: 0}
   cam: {fileID: 0}
   speed: 7.5
@@ -105,7 +108,22 @@ MonoBehaviour:
   JumpColorReturn: {r: 0.101960786, g: 0.26666668, b: 0, a: 1}
   BoostColorChange: {r: 1, g: 0.606, b: 0.9490196, a: 1}
   BoostColorReturn: {r: 0.6691177, g: 0, b: 0.6350057, a: 1}
-  Bridge1: []
+  isCollecting: Beginning
+  Music: {fileID: 0}
+  PickUp: {fileID: 0}
+--- !u!114 &11457384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 175a45ab57f6a499691c2c383027ca33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOutTexture: {fileID: 2800000, guid: ec4190051b0d343eeac7628e82e360aa, type: 3}
+  fadeSpeed: 0.8
 --- !u!135 &13514310
 SphereCollider:
   m_ObjectHideFlags: 1
