@@ -102,13 +102,12 @@ public class PlayerController : MonoBehaviour {
 			Music.PuzzleStatus = "Puzzle1";
 
 			yield return new WaitForSeconds(0.5f);
-			audioSource.PlayOneShot(FastForward, 0.7f);
-			yield return new WaitForSeconds(3);
-
 
 			GameObject BridgeCubes = GameObject.FindGameObjectWithTag("Bridge1");
 			BridgeStatus = BridgeCubes.GetComponent<BridgeStates> ();
 			BridgeStatus.BridgeState1 = true;
+
+			audioSource.PlayOneShot(FastForward, 0.7f);
 
 		}
 		//Collectibles 4-6 Correct Sequence
@@ -144,7 +143,6 @@ public class PlayerController : MonoBehaviour {
 
 			yield return new WaitForSeconds(0.5f);
 			audioSource.PlayOneShot(FastForward, 0.7f);
-			yield return new WaitForSeconds(3);
 
 			GameObject BridgeCubes = GameObject.FindGameObjectWithTag("Bridge2");
 			BridgeStatus = BridgeCubes.GetComponent<BridgeStates> ();
@@ -185,7 +183,6 @@ public class PlayerController : MonoBehaviour {
 
 			yield return new WaitForSeconds(0.5f);
 			audioSource.PlayOneShot(FastForward, 0.7f);
-			yield return new WaitForSeconds(3);
 
 
 			GameObject BridgeCubes = GameObject.FindGameObjectWithTag("Bridge3");
