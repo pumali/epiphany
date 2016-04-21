@@ -131,9 +131,9 @@ public class PlayerController : MonoBehaviour {
 			isCollecting = "Sixth";
 
 			//reference to music manager to change the song
-//			GameObject Player = GameObject.FindGameObjectWithTag("Player");
-//			Music = Player.GetComponent<MusicManager> ();
-//			Music.PuzzleStatus = "Puzzle2";
+			GameObject Player = GameObject.FindGameObjectWithTag("Player");
+			Music = Player.GetComponent<MusicManager> ();
+			Music.PuzzleStatus = "Puzzle2";
 
 //			yield return new WaitForSeconds(0.5f);
 //			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -171,9 +171,9 @@ public class PlayerController : MonoBehaviour {
 			isCollecting = "Ninth";
 
 			//reference to music manager to change the song
-//			GameObject Player = GameObject.FindGameObjectWithTag("Player");
-//			Music = Player.GetComponent<MusicManager> ();
-//			Music.PuzzleStatus = "Puzzle3";
+			GameObject Player = GameObject.FindGameObjectWithTag("Player");
+			Music = Player.GetComponent<MusicManager> ();
+			Music.PuzzleStatus = "Puzzle3";
 
 //			yield return new WaitForSeconds(0.5f);
 //			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
