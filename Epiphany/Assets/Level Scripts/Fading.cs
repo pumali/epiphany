@@ -4,7 +4,7 @@ using System.Collections;
 public class Fading : MonoBehaviour {
 
 	public Texture2D fadeOutTexture;	// the texture that will overlay the screen. This can be a black image or a loading graphic
-	public float fadeSpeed = 0.8f;		// the fading speed
+	public float fadeSpeed = 0.4f;		// the fading speed
 
 	private int drawDepth = -1000;		// the texture's order in the draw hierarchy: a low number means it renders on top
 	private float alpha = 1.0f;			// the texture's alpha value between 0 and 1
