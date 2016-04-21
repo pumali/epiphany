@@ -33,7 +33,15 @@ public class PlayerController : MonoBehaviour {
 
 	public string isCollecting = "Beginning";
 	public MusicManager Music;
-	public AudioClip PickUp;
+	public AudioSource audioSource;
+
+	//audio
+	public AudioClip PickUp1;
+	public AudioClip PickUp2;
+	public AudioClip PickUp3;
+	public AudioClip FastForward;
+
+
 	public float fadeTime = 0.4f;
 
 
@@ -41,6 +49,8 @@ public class PlayerController : MonoBehaviour {
 
 	void Start (){
 	 	rb = GetComponent<Rigidbody>();
+		audioSource = GetComponent<AudioSource>();
+
 	 }
 
 	void FixedUpdate (){
@@ -58,21 +68,24 @@ public class PlayerController : MonoBehaviour {
  		rb.AddForce(movement * speed);
  	}
 
-	void OnTriggerEnter(Collider trigger) {
+	IEnumerator OnTriggerEnter(Collider trigger) {
 
 	//Collectibles 1-3 Correct Sequence
 		if (isCollecting == "Beginning" && trigger.gameObject.CompareTag("PickUp1")){
+			audioSource.PlayOneShot(PickUp1, 0.7f);
 			trigger.gameObject.SetActive (false);
 			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "First";
 		}
 		if (isCollecting == "First" && trigger.gameObject.CompareTag("PickUp2")){
+			audioSource.PlayOneShot(PickUp2, 0.7f);
 			trigger.gameObject.SetActive (false);
 			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Second";
 		}
 
 		if (isCollecting == "Second" && trigger.gameObject.CompareTag("PickUp3")){
+			audioSource.PlayOneShot(PickUp3, 0.7f);
 			trigger.gameObject.SetActive (false);
 			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Third";
@@ -83,36 +96,45 @@ public class PlayerController : MonoBehaviour {
 //			MainCamera.CameraLocation = "OnSolution1";
 //			yield return new WaitForSeconds(1.0f);
 
-			GameObject BridgeCubes = GameObject.FindGameObjectWithTag("Bridge1");
-			BridgeStatus = BridgeCubes.GetComponent<BridgeStates> ();
-			BridgeStatus.BridgeState1 = true;
-
 		//reference to music manager to change the song
 			GameObject Player = GameObject.FindGameObjectWithTag("Player");
 			Music = Player.GetComponent<MusicManager> ();
 			Music.PuzzleStatus = "Puzzle1";
 
+			yield return new WaitForSeconds(0.5f);
+			audioSource.PlayOneShot(FastForward, 0.7f);
+			yield return new WaitForSeconds(3);
+
+
+			GameObject BridgeCubes = GameObject.FindGameObjectWithTag("Bridge1");
+			BridgeStatus = BridgeCubes.GetComponent<BridgeStates> ();
+			BridgeStatus.BridgeState1 = true;
+
 		}
 		//Collectibles 4-6 Correct Sequence
 		if (isCollecting == "Beginning" && trigger.gameObject.CompareTag("PickUp4")){
+			audioSource.PlayOneShot(PickUp1, 0.7f);
 			trigger.gameObject.SetActive (false);
 			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Fourth";
 		}
 		if (isCollecting == "Fourth" && trigger.gameObject.CompareTag("PickUp5")){
+			audioSource.PlayOneShot(PickUp2, 0.7f);
 			trigger.gameObject.SetActive (false);
 			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Fifth";
 		}
 
 		if (isCollecting == "Fifth" && trigger.gameObject.CompareTag("PickUp6")){
+			audioSource.PlayOneShot(PickUp3, 0.7f);
 			trigger.gameObject.SetActive (false);
 			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Sixth";
+
 			//reference to music manager to change the song
-			GameObject Player = GameObject.FindGameObjectWithTag("Player");
-			Music = Player.GetComponent<MusicManager> ();
-			Music.PuzzleStatus = "Puzzle2";
+//			GameObject Player = GameObject.FindGameObjectWithTag("Player");
+//			Music = Player.GetComponent<MusicManager> ();
+//			Music.PuzzleStatus = "Puzzle2";
 
 //			yield return new WaitForSeconds(0.5f);
 //			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -120,37 +142,51 @@ public class PlayerController : MonoBehaviour {
 //			MainCamera.CameraLocation = "OnSolution2";
 //			yield return new WaitForSeconds(1.0f);
 
+			yield return new WaitForSeconds(0.5f);
+			audioSource.PlayOneShot(FastForward, 0.7f);
+			yield return new WaitForSeconds(3);
+
 			GameObject BridgeCubes = GameObject.FindGameObjectWithTag("Bridge2");
 			BridgeStatus = BridgeCubes.GetComponent<BridgeStates> ();
 			BridgeStatus.BridgeState2 = true;
+
+	
 		}
 		//Collectibles 7-9 Correct Sequence
 		if (isCollecting == "Beginning" && trigger.gameObject.CompareTag("PickUp7")){
+			audioSource.PlayOneShot(PickUp1, 0.7f);
 			trigger.gameObject.SetActive (false);
 			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Seventh";
 		}
 		if (isCollecting == "Seventh" && trigger.gameObject.CompareTag("PickUp8")){
+			audioSource.PlayOneShot(PickUp2, 0.7f);
 			trigger.gameObject.SetActive (false);
 			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Eighth";
 		}
 
 		if (isCollecting == "Eighth" && trigger.gameObject.CompareTag("PickUp9")){
+			audioSource.PlayOneShot(PickUp3, 0.7f);
 			trigger.gameObject.SetActive (false);
 			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Ninth";
 
 			//reference to music manager to change the song
-			GameObject Player = GameObject.FindGameObjectWithTag("Player");
-			Music = Player.GetComponent<MusicManager> ();
-			Music.PuzzleStatus = "Puzzle3";
+//			GameObject Player = GameObject.FindGameObjectWithTag("Player");
+//			Music = Player.GetComponent<MusicManager> ();
+//			Music.PuzzleStatus = "Puzzle3";
 
 //			yield return new WaitForSeconds(0.5f);
 //			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
 //			MainCamera = Camera.GetComponent<CameraController> ();
 //			MainCamera.CameraLocation = "OnSolution2";
 //			yield return new WaitForSeconds(1.0f);
+
+			yield return new WaitForSeconds(0.5f);
+			audioSource.PlayOneShot(FastForward, 0.7f);
+			yield return new WaitForSeconds(3);
+
 
 			GameObject BridgeCubes = GameObject.FindGameObjectWithTag("Bridge3");
 			BridgeStatus = BridgeCubes.GetComponent<BridgeStates> ();

@@ -17,9 +17,19 @@ public class ShieldBehavior : MonoBehaviour {
 	public BridgeStates BridgeStatus2;
 	public BridgeStates BridgeStatus3;
 
+	//audio
+	public AudioClip Collision;
+	public AudioClip PickUp1;
+	public AudioClip PickUp2;
+	public AudioClip PickUp3;
+	public AudioSource audioSource;
+
+
 
 	// Use this for initialization
 	void Start () {
+		audioSource = GetComponent<AudioSource>();
+
 		GameObject PlayerBall = GameObject.FindGameObjectWithTag("Player");
 		Player = PlayerBall.GetComponent<PlayerController> ();
 
@@ -44,20 +54,22 @@ public class ShieldBehavior : MonoBehaviour {
 
 			
 			Player.isCollecting = "Beginning";
+			audioSource.PlayOneShot(Collision, 0.7f);
 
 			gameObject.GetComponent<BoxCollider>().enabled = false;
 			Pickup1.SetActive(false);
 			Pickup2.SetActive(false);
 			Pickup3.SetActive(false);
-			yield return new WaitForSeconds(2);
+			yield return new WaitForSeconds(1);
 			Pickup1.SetActive(true);
-			yield return new WaitForSeconds(2);
+			audioSource.PlayOneShot(PickUp1, 0.7f);
+			yield return new WaitForSeconds(1);
 			Pickup2.SetActive(true);
-			yield return new WaitForSeconds(2);
+			audioSource.PlayOneShot(PickUp2, 0.7f);
+			yield return new WaitForSeconds(1);
 			Pickup3.SetActive(true);
-			gameObject.GetComponent<BoxCollider>().enabled = true;
-			yield return new WaitForSeconds(2);
-	
+			audioSource.PlayOneShot(PickUp3, 0.7f);
+			gameObject.GetComponent<BoxCollider>().enabled = true;	
 
 		}
 
@@ -67,20 +79,22 @@ public class ShieldBehavior : MonoBehaviour {
 
 			
 			Player.isCollecting = "Beginning";
+			audioSource.PlayOneShot(Collision, 0.7f);
 
 			gameObject.GetComponent<BoxCollider>().enabled = false;
 			Pickup4.SetActive(false);
 			Pickup5.SetActive(false);
 			Pickup6.SetActive(false);
-			yield return new WaitForSeconds(2);
+			yield return new WaitForSeconds(1);
 			Pickup4.SetActive(true);
-			yield return new WaitForSeconds(2);
+			audioSource.PlayOneShot(PickUp1, 0.7f);
+			yield return new WaitForSeconds(1);
 			Pickup5.SetActive(true);
-			yield return new WaitForSeconds(2);
+			audioSource.PlayOneShot(PickUp2, 0.7f);
+			yield return new WaitForSeconds(1);
 			Pickup6.SetActive(true);
-			gameObject.GetComponent<BoxCollider>().enabled = true;
-			yield return new WaitForSeconds(2);
-	
+			audioSource.PlayOneShot(PickUp3, 0.7f);
+			gameObject.GetComponent<BoxCollider>().enabled = true;	
 
 		}
 
@@ -89,20 +103,22 @@ public class ShieldBehavior : MonoBehaviour {
 
 			
 			Player.isCollecting = "Beginning";
+			audioSource.PlayOneShot(Collision, 0.7f);
 
 			gameObject.GetComponent<BoxCollider>().enabled = false;
 			Pickup7.SetActive(false);
 			Pickup8.SetActive(false);
 			Pickup9.SetActive(false);
-			yield return new WaitForSeconds(2);
+			yield return new WaitForSeconds(1);
 			Pickup7.SetActive(true);
-			yield return new WaitForSeconds(2);
+			audioSource.PlayOneShot(PickUp1, 0.7f);
+			yield return new WaitForSeconds(1);
 			Pickup8.SetActive(true);
-			yield return new WaitForSeconds(2);
+			audioSource.PlayOneShot(PickUp2, 0.7f);
+			yield return new WaitForSeconds(1);
 			Pickup9.SetActive(true);
-			gameObject.GetComponent<BoxCollider>().enabled = true;
-			yield return new WaitForSeconds(2);
-	
+			audioSource.PlayOneShot(PickUp3, 0.3f);
+			gameObject.GetComponent<BoxCollider>().enabled = true;	
 
 		}
 
