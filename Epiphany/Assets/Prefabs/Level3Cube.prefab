@@ -88,6 +88,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RedColorChange: {r: 0.88235295, g: 0, b: 0, a: 1}
+  ColorChangeTimer: 4
+  RedColorReturn: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
