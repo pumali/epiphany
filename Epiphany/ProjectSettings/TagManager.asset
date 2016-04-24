@@ -41,6 +41,14 @@ TagManager:
   - Cryptic2
   - Cryptic3
   - Cryptic4
+  - GoalLight
+  - PickUp
+  - CameraLocation2
+  - Puzzle1Neutrals
+  - Puzzle2Neutrals
+  - Puzzle3Neutrals
+  - Puzzle1Movement1
+  - MovementCube
   layers:
   - Default
   - TransparentFX
