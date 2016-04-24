@@ -313,7 +313,8 @@ MonoBehaviour:
     width: 1275.5254
     height: 1003.7288
   selectedBlock: {fileID: 164010139}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 164010144}
   variables: []
   description: 
   stepPause: 0
@@ -390,7 +391,7 @@ MonoBehaviour:
   itemId: 4
   errorMessage: 
   indentLevel: 0
-  duration: 2.5
+  duration: 3.5
 --- !u!1 &675280543
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,7 +491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutTexture: {fileID: 2800000, guid: ec4190051b0d343eeac7628e82e360aa, type: 3}
-  fadeSpeed: 0.4
+  fadeSpeed: 0.2
 --- !u!1 &692812392
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,7 +679,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -700,7 +701,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!114 &1107338573
 MonoBehaviour:
   m_ObjectHideFlags: 0
