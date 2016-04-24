@@ -18,14 +18,18 @@ public class PuzzleColorChanger : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Player.isCollecting == "Third") {
-		Invoke("ColorChange", 1);
+		Invoke("ColorChange", 0.1f);
 		}
 	}
 
 	void ColorChange(){
+		if (Player.isCollecting == "Third") {
+
 		foreach(GameObject form in Puzzle1) {
 //			yield return new WaitForSeconds(0.1f);
 			form.gameObject.GetComponent<Renderer> ().material.color = RedColorChange;
+
 		}
+	}
 	}
 }
