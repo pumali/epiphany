@@ -217,6 +217,8 @@ GameObject:
   - 114: {fileID: 164010145}
   - 114: {fileID: 164010144}
   - 114: {fileID: 164010143}
+  - 114: {fileID: 164010147}
+  - 114: {fileID: 164010146}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -286,11 +288,13 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 164010138}
   commandList:
+  - {fileID: 164010147}
   - {fileID: 164010137}
   - {fileID: 164010142}
   - {fileID: 164010145}
   - {fileID: 164010144}
   - {fileID: 164010143}
+  - {fileID: 164010146}
 --- !u!114 &164010140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,7 +321,7 @@ MonoBehaviour:
     height: 1003.7288
   selectedBlock: {fileID: 164010139}
   selectedCommands:
-  - {fileID: 164010143}
+  - {fileID: 164010146}
   variables: []
   description: 
   stepPause: 0
@@ -438,6 +442,37 @@ MonoBehaviour:
   fadeWhenDone: 1
   waitForClick: 1
   setSayDialog: {fileID: 0}
+--- !u!114 &164010146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 164010136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  errorMessage: 
+  indentLevel: 0
+  sceneName: Level2PreNarrative
+  loadingImage: {fileID: 0}
+--- !u!114 &164010147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 164010136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 6
+  errorMessage: 
+  indentLevel: 0
+  duration: 2.5
 --- !u!1 &675280543
 GameObject:
   m_ObjectHideFlags: 0

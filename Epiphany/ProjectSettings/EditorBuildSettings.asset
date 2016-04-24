@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level2PreNarrative.unity
   - enabled: 1
+    path: Assets/Level2PostNarrative.unity
+  - enabled: 1
     path: Assets/Level3PreNarrative.unity
+  - enabled: 1
+    path: Assets/Level3.unity
+  - enabled: 1
+    path: Assets/Level3PostNarrative.unity
   - enabled: 1
     path: Assets/Final.unity

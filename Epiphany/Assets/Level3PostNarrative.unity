@@ -186,7 +186,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: eeb00f6cd27e9ef4d9174551b3342dec, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 0
@@ -216,6 +216,7 @@ GameObject:
   - 114: {fileID: 164010142}
   - 114: {fileID: 164010145}
   - 114: {fileID: 164010143}
+  - 114: {fileID: 164010144}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -275,8 +276,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 117.55931
-    y: 67.836
+    x: 114.82446
+    y: 66.46857
     width: 120
     height: 40
   itemId: 0
@@ -284,6 +285,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 164010138}
   commandList:
+  - {fileID: 164010144}
   - {fileID: 164010137}
   - {fileID: 164010142}
   - {fileID: 164010145}
@@ -313,7 +315,8 @@ MonoBehaviour:
     width: 1275.5254
     height: 1003.7288
   selectedBlock: {fileID: 164010139}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 164010144}
   variables: []
   description: 
   stepPause: 0
@@ -385,6 +388,21 @@ MonoBehaviour:
   fadeWhenDone: 1
   waitForClick: 1
   setSayDialog: {fileID: 0}
+--- !u!114 &164010144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 164010136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 5
+  errorMessage: 
+  indentLevel: 0
+  duration: 2.5
 --- !u!114 &164010145
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -423,6 +441,7 @@ GameObject:
   - 92: {fileID: 675280546}
   - 124: {fileID: 675280545}
   - 81: {fileID: 675280544}
+  - 114: {fileID: 675280549}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -497,6 +516,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &675280549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 675280543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 175a45ab57f6a499691c2c383027ca33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOutTexture: {fileID: 2800000, guid: ec4190051b0d343eeac7628e82e360aa, type: 3}
+  fadeSpeed: 0.4
 --- !u!1 &692812392
 GameObject:
   m_ObjectHideFlags: 0
