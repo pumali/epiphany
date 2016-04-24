@@ -48,6 +48,7 @@ TagManager:
   - Puzzle2Neutrals
   - Puzzle3Neutrals
   - Puzzle1Movement1
+  - MovementCube
   layers:
   - Default
   - TransparentFX
