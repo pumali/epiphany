@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour {
 //			yield return new WaitForSeconds(1.0f);
 
 		//reference to music manager to change the song
-			GameObject Player = GameObject.FindGameObjectWithTag("Player");
+			GameObject Player = GameObject.FindGameObjectWithTag("Mixer");
 			Music = Player.GetComponent<MusicManager> ();
 			Music.PuzzleStatus = "Puzzle1";
 
@@ -131,7 +131,7 @@ public class PlayerController : MonoBehaviour {
 			isCollecting = "Sixth";
 
 			//reference to music manager to change the song
-			GameObject Player = GameObject.FindGameObjectWithTag("Player");
+			GameObject Player = GameObject.FindGameObjectWithTag("Mixer");
 			Music = Player.GetComponent<MusicManager> ();
 			Music.PuzzleStatus = "Puzzle2";
 
@@ -171,7 +171,7 @@ public class PlayerController : MonoBehaviour {
 			isCollecting = "Ninth";
 
 			//reference to music manager to change the song
-			GameObject Player = GameObject.FindGameObjectWithTag("Player");
+			GameObject Player = GameObject.FindGameObjectWithTag("Mixer");
 			Music = Player.GetComponent<MusicManager> ();
 			Music.PuzzleStatus = "Puzzle3";
 
