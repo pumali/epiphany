@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11423922}
   m_Layer: 0
   m_Name: Level3Cube
-  m_TagString: Puzzle2Neutrals
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: -45.12, z: -190.7}
+  m_LocalPosition: {x: 22.6, y: -45.12, z: -192}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,9 +87,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0645227a6a2a84ca6a3a09a62805530b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RedColorChange: {r: 0.9558824, g: 0.759, b: 0.17571367, a: 1}
+  RedColorChange: {r: 0.71323526, g: 0.5305973, b: 0, a: 1}
   ColorChangeTimer: 4
-  RedColorReturn: {r: 1, g: 1, b: 1, a: 1}
+  RedColorReturn: {r: 0.6156863, g: 0.6117647, b: 0.6039216, a: 0.9882353}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
