@@ -49,6 +49,8 @@ TagManager:
   - Puzzle3Neutrals
   - Puzzle1Movement1
   - MovementCube
+  - MUSIC
+  - Bridge1Wall
   - Mixer
   layers:
   - Default
