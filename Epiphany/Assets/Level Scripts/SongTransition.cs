@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 public class SongTransition : MonoBehaviour {
 
 	public int destroyedmusiclevel;
-	public string LevelName;
+
+
 	void Awake() {
 		DontDestroyOnLoad(transform.gameObject);
+
 	}
 
 	void OnLevelWasLoaded(int level) {

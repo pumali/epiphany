@@ -10,6 +10,10 @@ AudioMixerController:
   m_MasterGroup: {fileID: 24300001}
   m_Snapshots:
   - {fileID: 24500003}
+  - {fileID: 24572568}
+  - {fileID: 24512580}
+  - {fileID: 24599626}
+  - {fileID: 24545542}
   m_StartSnapshot: {fileID: 24500003}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
@@ -23,7 +27,7 @@ AudioMixerController:
     - 92fe8746ceaca4d4abbcee294623359e
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 24500003}
+  m_TargetSnapshot: {fileID: 24572568}
 --- !u!243 &24300001
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -188,4 +192,63 @@ AudioMixerSnapshotController:
   m_SnapshotID: 2ae401c3e6bba48e1b890b27c9bc6a97
   m_FloatValues:
     d7287812cef2941b9bd3fb9d8b4f3677: -0.102313995
+    7846b7c2acaaa43c0bec6c85f5e470aa: -80
+    00f429c9ad8fe46608048f7ddc44507b: -80
+    609f326ba6f5949eb8cc4e14e8986b52: -80
+  m_TransitionOverrides: {}
+--- !u!245 &24512580
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Level 1 Puzzle 1
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 6757641a6fb554fc182b08de77312efc
+  m_FloatValues:
+    d7287812cef2941b9bd3fb9d8b4f3677: -0.102313995
+    7846b7c2acaaa43c0bec6c85f5e470aa: -80
+    00f429c9ad8fe46608048f7ddc44507b: -0.002441872
+    609f326ba6f5949eb8cc4e14e8986b52: -80
+  m_TransitionOverrides: {}
+--- !u!245 &24545542
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Level 1 Puzzle 3
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 3a5eb258ad96a489098c546cb4a44694
+  m_FloatValues:
+    d7287812cef2941b9bd3fb9d8b4f3677: -0.102313995
+    7846b7c2acaaa43c0bec6c85f5e470aa: -0.10231405
+    00f429c9ad8fe46608048f7ddc44507b: -0.19117308
+    609f326ba6f5949eb8cc4e14e8986b52: -0.0024418682
+  m_TransitionOverrides: {}
+--- !u!245 &24572568
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Level 1 Begin
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: b0e38e465e8464f8083740be56159525
+  m_FloatValues:
+    d7287812cef2941b9bd3fb9d8b4f3677: -0.102313995
+    7846b7c2acaaa43c0bec6c85f5e470aa: -80
+    00f429c9ad8fe46608048f7ddc44507b: -80
+    609f326ba6f5949eb8cc4e14e8986b52: -80
+  m_TransitionOverrides: {}
+--- !u!245 &24599626
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Level 1 Puzzle 2
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: f2d7723d7c433417c97df473565305f0
+  m_FloatValues:
+    d7287812cef2941b9bd3fb9d8b4f3677: -0.102313995
+    7846b7c2acaaa43c0bec6c85f5e470aa: -80
+    00f429c9ad8fe46608048f7ddc44507b: -0.037667945
+    609f326ba6f5949eb8cc4e14e8986b52: -0.037667945
   m_TransitionOverrides: {}
