@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.16, y: 5.53, z: 8.009999}
+  m_LocalPosition: {x: -4.321667, y: 5.530001, z: 6.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0645227a6a2a84ca6a3a09a62805530b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RedColorChange: {r: 0.076557115, g: 0.809, b: 0.34389105, a: 1}
+  RedColorChange: {r: 0.9558824, g: 0.759, b: 0.17571367, a: 1}
   ColorChangeTimer: 4
   RedColorReturn: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
