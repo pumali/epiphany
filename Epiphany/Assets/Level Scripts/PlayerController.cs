@@ -40,6 +40,11 @@ public class PlayerController : MonoBehaviour {
 	public AudioClip PickUp2;
 	public AudioClip PickUp3;
 	public AudioClip FastForward;
+	public AudioClip CorruptionCube;
+	public AudioClip JumpCube;
+	public AudioClip BoostCube;
+
+
 
 
 	public float fadeTime = 0.4f;
@@ -97,7 +102,7 @@ public class PlayerController : MonoBehaviour {
 //			yield return new WaitForSeconds(1.0f);
 
 		//reference to music manager to change the song
-			GameObject Player = GameObject.FindGameObjectWithTag("Player");
+			GameObject Player = GameObject.FindGameObjectWithTag("Mixer");
 			Music = Player.GetComponent<MusicManager> ();
 			Music.PuzzleStatus = "Puzzle1";
 
@@ -131,7 +136,7 @@ public class PlayerController : MonoBehaviour {
 			isCollecting = "Sixth";
 
 			//reference to music manager to change the song
-			GameObject Player = GameObject.FindGameObjectWithTag("Player");
+			GameObject Player = GameObject.FindGameObjectWithTag("Mixer");
 			Music = Player.GetComponent<MusicManager> ();
 			Music.PuzzleStatus = "Puzzle2";
 
@@ -171,7 +176,7 @@ public class PlayerController : MonoBehaviour {
 			isCollecting = "Ninth";
 
 			//reference to music manager to change the song
-			GameObject Player = GameObject.FindGameObjectWithTag("Player");
+			GameObject Player = GameObject.FindGameObjectWithTag("Mixer");
 			Music = Player.GetComponent<MusicManager> ();
 			Music.PuzzleStatus = "Puzzle3";
 
@@ -278,21 +283,23 @@ public class PlayerController : MonoBehaviour {
 
 		if (cube.gameObject.tag == "CorruptionCube")
 		{
-		//Color Change
-		cube.gameObject.GetComponent<Renderer> ().material.color = CorruptionColorChange;
-		//Disappear
-		yield return new WaitForSeconds(CorruptionTimer);
-		cube.gameObject.SetActive(false);
-		yield return new WaitForSeconds(CorruptionRespawner);
-		//Color Return
-		cube.gameObject.GetComponent<Renderer> ().material.color = CorruptionColorReturn;
-		//Reappear
-		cube.gameObject.SetActive(true);
-		//Grow
+			audioSource.PlayOneShot(CorruptionCube, 0.7f);
+			//Color Change
+			cube.gameObject.GetComponent<Renderer> ().material.color = CorruptionColorChange;
+			//Disappear
+			yield return new WaitForSeconds(CorruptionTimer);
+			cube.gameObject.SetActive(false);
+			yield return new WaitForSeconds(CorruptionRespawner);
+			//Color Return
+			cube.gameObject.GetComponent<Renderer> ().material.color = CorruptionColorReturn;
+			//Reappear
+			cube.gameObject.SetActive(true);
+			//Grow
 		}
 
 	//Jump Cubes
 		if (cube.gameObject.CompareTag("JumpCube")){
+			audioSource.PlayOneShot(JumpCube, 0.7f);
 			//Color Change
 			cube.gameObject.GetComponent<Renderer>().material.color = JumpColorChange;
 			//Jump
@@ -304,6 +311,8 @@ public class PlayerController : MonoBehaviour {
 
 	//Boost Cubes
 		if (cube.gameObject.CompareTag("BoostCube")){
+			audioSource.PlayOneShot(BoostCube, 0.7f);
+
 			//Color Change
 			cube.gameObject.GetComponent<Renderer>().material.color = BoostColorChange;
 			//Boost

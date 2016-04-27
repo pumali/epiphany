@@ -322,8 +322,7 @@ MonoBehaviour:
     width: 1275.5254
     height: 1003.7288
   selectedBlock: {fileID: 164010139}
-  selectedCommands:
-  - {fileID: 164010148}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -490,7 +489,7 @@ MonoBehaviour:
   loadingImage: {fileID: 0}
 --- !u!114 &164010148
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 164010136}
