@@ -209,8 +209,8 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   NextScene: 9
   fadeTime: 0.8
-  Narrative: {fileID: 8300000, guid: 92231e6506a034b049493dd16fd2755e, type: 3}
-  NarrativeTimer: 12
+  Narrative: {fileID: 8300000, guid: 7007aea9dfef141e1b074c522fbbac62, type: 3}
+  NarrativeTimer: 15
   Tape: {fileID: 8300000, guid: 10841b0fabe9b4a8481a9893f71fa18c, type: 3}
 --- !u!114 &229339911
 MonoBehaviour:
