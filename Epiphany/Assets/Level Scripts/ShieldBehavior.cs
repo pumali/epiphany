@@ -54,7 +54,7 @@ public class ShieldBehavior : MonoBehaviour {
 
 			
 			Player.isCollecting = "Beginning";
-			audioSource.PlayOneShot(Collision, 0.7f);
+			audioSource.PlayOneShot(Collision, 0.25f);
 
 			gameObject.GetComponent<BoxCollider>().enabled = false;
 			Pickup1.SetActive(false);
@@ -79,7 +79,7 @@ public class ShieldBehavior : MonoBehaviour {
 
 			
 			Player.isCollecting = "Beginning";
-			audioSource.PlayOneShot(Collision, 0.7f);
+			audioSource.PlayOneShot(Collision, 0.25f);
 
 			gameObject.GetComponent<BoxCollider>().enabled = false;
 			Pickup4.SetActive(false);
@@ -103,7 +103,7 @@ public class ShieldBehavior : MonoBehaviour {
 
 			
 			Player.isCollecting = "Beginning";
-			audioSource.PlayOneShot(Collision, 0.7f);
+			audioSource.PlayOneShot(Collision, 0.25f);
 
 			gameObject.GetComponent<BoxCollider>().enabled = false;
 			Pickup7.SetActive(false);
