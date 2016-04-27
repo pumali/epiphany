@@ -50,7 +50,7 @@ TagManager:
   - Puzzle1Movement1
   - MovementCube
   - MUSIC
-  - Bridge1Wall
+  - Puzzle2Movement1
   - Mixer
   layers:
   - Default
