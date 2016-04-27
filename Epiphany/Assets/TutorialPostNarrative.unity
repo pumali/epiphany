@@ -276,7 +276,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 115.999985
-    y: 69.203415
+    y: 70.762726
     width: 120
     height: 40
   itemId: 0
@@ -313,8 +313,7 @@ MonoBehaviour:
     width: 1275.5254
     height: 1003.7288
   selectedBlock: {fileID: 164010139}
-  selectedCommands:
-  - {fileID: 164010144}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0

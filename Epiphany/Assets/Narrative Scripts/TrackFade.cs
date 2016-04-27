@@ -17,6 +17,8 @@ public class TrackFade : MonoBehaviour {
 	// Use this for initialization
 	IEnumerator Start () {
 	audioSource = GetComponent<AudioSource>();
+	
+	yield return new WaitForSeconds(1.5f);
 
 	audioSource.PlayOneShot(Narrative, 0.7f);
 
