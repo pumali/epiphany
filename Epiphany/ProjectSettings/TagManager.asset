@@ -51,7 +51,7 @@ TagManager:
   - MovementCube
   - MUSIC
   - Puzzle2Movement1
-  - Mixer
+  - Puzzle3Movement1
   layers:
   - Default
   - TransparentFX
