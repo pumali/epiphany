@@ -464,7 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b4385791065447f58244342c07d074c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevel: 1
+  NextLevel: 2
   fadeTime: 0.8
 --- !u!1 &2072299850
 GameObject:

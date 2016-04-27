@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
-  NextScene: 2
+  NextScene: 3
   fadeTime: 0.8
   Narrative: {fileID: 8300000, guid: a42781a2ba7ca41659dd11809a56fc11, type: 3}
   NarrativeTimer: 6
