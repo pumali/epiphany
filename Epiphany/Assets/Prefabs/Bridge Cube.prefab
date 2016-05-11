@@ -11,13 +11,13 @@ GameObject:
   - 33: {fileID: 3334016}
   - 65: {fileID: 6569726}
   - 23: {fileID: 2390652}
-  - 114: {fileID: 11465920}
+  - 114: {fileID: 11415654}
   m_Layer: 0
   m_Name: Bridge Cube
-  m_TagString: Untagged
+  m_TagString: Bridge2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &475604
 Transform:
@@ -25,9 +25,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127938}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.122, y: -0.833, z: -4.3}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalRotation: {x: -0.23233844, y: 0.96487516, z: 0.019688528, w: 0.12102581}
+  m_LocalPosition: {x: 102.59, y: 48.95, z: -114.62}
+  m_LocalScale: {x: 1.2000015, y: 1.2000002, z: 1.2000022}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -76,7 +76,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1, y: 1.1, z: 1.1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11465920
+--- !u!114 &11415654
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -91,6 +91,8 @@ MonoBehaviour:
   BridgeState2: 0
   BridgeState3: 0
   Bridge1: []
+  Bridge2: []
+  Bridge3: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

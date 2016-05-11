@@ -16,9 +16,12 @@ public class BridgeStates : MonoBehaviour {
 	void Start () {
 
 		Bridge1 = GameObject.FindGameObjectsWithTag ("Bridge1");
+		Debug.Log ("found tag"); 
 			foreach(GameObject form in Bridge1) {
 			form.GetComponent<Renderer> ().enabled = false;
+			Debug.Log ("render enabled"); 
 			form.GetComponent<Collider> ().enabled = false;
+			Debug.Log ("collider enabled"); 
 			}
 
 		Bridge2 = GameObject.FindGameObjectsWithTag ("Bridge2");

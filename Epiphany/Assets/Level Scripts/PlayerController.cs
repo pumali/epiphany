@@ -81,12 +81,14 @@ public class PlayerController : MonoBehaviour {
 			trigger.gameObject.SetActive (false);
 			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "First";
+			Debug.Log ("first pickup"); 
 		}
 		if (isCollecting == "First" && trigger.gameObject.CompareTag("PickUp2")){
 			audioSource.PlayOneShot(PickUp2, 0.7f);
 			trigger.gameObject.SetActive (false);
 			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Second";
+			Debug.Log ("second pickup"); 
 		}
 
 		if (isCollecting == "Second" && trigger.gameObject.CompareTag("PickUp3")){
@@ -94,6 +96,7 @@ public class PlayerController : MonoBehaviour {
 			trigger.gameObject.SetActive (false);
 			Instantiate(PickUpParticleEffect, gameObject.transform.position, Quaternion.LookRotation(Vector3.up));
 			isCollecting = "Third";
+			Debug.Log ("third pickup"); 
 
 //			yield return new WaitForSeconds(0.5f);
 //			GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -105,12 +108,14 @@ public class PlayerController : MonoBehaviour {
 			GameObject Player = GameObject.FindGameObjectWithTag("Mixer");
 			Music = Player.GetComponent<MusicManager> ();
 			Music.PuzzleStatus = "Puzzle1";
+			Debug.Log ("puzzle 1"); 
 
 			yield return new WaitForSeconds(0.5f);
 
 			GameObject BridgeCubes = GameObject.FindGameObjectWithTag("Bridge1");
 			BridgeStatus = BridgeCubes.GetComponent<BridgeStates> ();
 			BridgeStatus.BridgeState1 = true;
+			Debug.Log ("builds bridge"); 
 
 			audioSource.PlayOneShot(FastForward, 0.7f);
 
